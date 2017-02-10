@@ -1,0 +1,46 @@
+// EXAMPLE OF FORM 
+.vmodal.fade#modalform
+	.vmodal-dialog
+		.vmodal-content
+			.vmodal-header
+				button(type="button" class="vmodal-close" data-close="vmodal") &times;
+				p.vmodal-title Заголовок_формы
+				p.vmodal-p Текст_формы
+			.vmodal-body
+				form(action="" class="vmain-form")
+					input(type="text" placeholder="Имя")
+					input(type="email" placeholder="E-mail")
+					input(type="text" placeholder="Телефон")
+					button.vbtn.vbtn-effect-bounce-top.vbtn-corp(type="submit") Получить!
+			.vmodal-footer.text-center
+				p.text-small *Ваши данные <span class="bold">никогда не будут</span><br>переданы 3-м лицам
+// EXAMPLE OF COLLAPSE 
+.cf.vcollapse-wrap
+	.vcollapse-inner
+		.vcollapse-header
+			p 1
+		.vcollapse-body
+			p Lorem
+// Example of tabs
+.vtabs-wrap
+	.vtabs-links
+		.vtabs-list
+			li.active: a.vtabs-link(data-func="tab" data-target="#vtab1") Tab_link_1
+			li: a.vtabs-link(data-func="tab" data-target="#vtab2") Tab_link_2
+		.vtabs-content
+			.vtabs-content-inner#vtab1
+				p 1
+			.vtabs-content-inner#vtab2
+				p 2
+
+// EXAMPLE OF BUTTON
+button(class="vbtn vbtn-effect-shutter-vertical-out vbtn-corp" data-modal="vmodal" data-modal-target="#modalform") BUTTON_TEXT
+
+//
+	LIST OF POSSIBLE CLASSES
+
+	vbtn-effect-shutter-vertical-out
+	vbtn-effect-shutter-horizontal-out
+	vbtn-effect-bounce-top
+	vbtn-effect-bounce-bottom
+	vbtn-effect-skew

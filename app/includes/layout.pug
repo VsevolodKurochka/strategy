@@ -1,0 +1,20 @@
+doctype html
+html(lang="ru")
+	head
+		block title
+			title Project_name
+		block description
+			meta(name="description" content="")
+		include head
+		include mixins
+	body
+		block nav
+			.vnav-wrap.vnav-wrap-fixed
+				.vcontainer.vnav-container
+					include nav
+		main.main-wrapper
+			block content
+				
+			block footer
+				
+			block dev

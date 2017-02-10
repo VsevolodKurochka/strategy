@@ -1,0 +1,33 @@
+include ./mixins
+.vrow.flex-v-center
+	.vak-xs-8.vak-md-3
+		.vnav-logo
+			button(type="button" class="vnav-btn" data-menu=".vnav-wrap-fixed .vnav")
+				span.lines
+					span
+					span
+					span
+				//span.text Menu
+			.block-inline
+				img(src="img/logo.png" alt="")
+	nav.vnav.vak-xs-12.vak-md-6
+		ul
+			+item("#sec1", "active") Главная
+			+item("#sec1") Обо_мне1
+			+item("#sec1") Обо_мне2
+			+item("#sec1") Обо_мне3
+			+item("#sec1") Обо_мне4
+			+item("#sec1") Обо_мне5
+			+item("#sec1") Обо_мне6
+			+item("#sec1") Обо_мне7
+			+item("#sec1") Обо_мне8
+			+item("#sec1") Обо_мне9
+
+	.vak-xs-4.vak-md-3
+		.vnav-text-toggle.text-right
+			span
+			span
+			span
+		.vnav-text.text-md-right
+			a.vnav-text-inner +38 (093) 961 33 54
+			a.vnav-text-inner.vnav-text-hidden +38 (093) 961 33 54

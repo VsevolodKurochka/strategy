@@ -1,0 +1,63 @@
+.vtitle{
+	margin-bottom: 60px;
+	padding-left: 7.5px;
+	padding-right: 7.5px;
+	line-height: 1;
+	font-size: 40px;
+	@include fs('vtitle');
+	@extend .text-center;
+	@extend .text-tu;
+	@extend .light;
+	&-small{
+		margin: 12px 0;
+		font-size: 17px;
+		@include fs('vtitle-small');	
+	}
+	&-big{
+		line-height: 1.1;
+		font-size: 48px;
+		margin: 24px 0;
+		@include fs('vtitle-big');
+		@extend .bold;
+	}
+	@include resp-min(sm){
+		&-big{
+			margin-bottom: 60px;
+		}
+	}
+	@include resp-min(md){
+		margin-bottom: 75px;
+	}
+}
+.text{
+	&-tu{
+		text-transform: uppercase;
+	}
+	&-du{
+		text-decoration: underline;
+	}
+	&-dn{
+		text-decoration: none;
+	}
+	&-center{
+	 text-align: center;
+	}
+	&-left{
+	 text-align: left;
+	}
+	&-right{
+	 text-align: right;
+	}
+}
+// @each $br-name, $br-value in $breakpoints{
+//   @include resp-max($br-name){
+//     .max-#{$br-name}-center{
+//       text-align: center;
+//     }
+//   }
+//   @include resp-min($br-name){
+//     .min-#{$br-name}-right{
+//       text-align: right;
+//     }
+//   }
+// }

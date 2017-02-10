@@ -1,0 +1,15 @@
+mixin item(href, active)
+	if(active)
+		li(class="active"): a( href=href ): block
+	else	
+		li: a( href=href ): block
+mixin button(buttonClass, modalTarget)
+
+	- buttonClass = buttonClass || 'vbtn vbtn-effect-shutter-vertical-out vbtn-corp'
+
+	if(modalTarget != null)
+		- modalTarget = modalTarget
+	else
+		- modalTarget = "#modalform"
+
+	button(class=buttonClass data-func="vmodal" data-target=modalTarget)&attributes(attributes): block

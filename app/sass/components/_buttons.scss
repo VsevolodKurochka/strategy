@@ -1,0 +1,124 @@
+.vbtn {
+  min-width: 200px;
+  max-width: 100%;
+  padding: 20px 25px;
+  overflow: hidden;
+  border: none;
+  border-radius: 3px;
+  z-index: z('default');
+  font-size: 18px;
+  @extend .relative;
+  @extend .block-inline;
+  @extend .text-dn;
+  @extend .bold;
+  @extend .transition;
+  &:before{
+    z-index: -1;
+    @extend .pseudo;
+    @extend .transition;
+  }
+  @include resp-min(xs){
+    font-size: 18px;
+    padding: 30px;
+  }
+  &-effect{
+    transform: translateZ(0);
+    &-skew{
+      &:before{
+        width: 100%;
+        height: 0;
+        top: 50%;
+        left: 50%; 
+        opacity: 0;
+        transform: translateX(-50%) translateY(-50%) rotate(45deg);
+      }
+      &:hover{
+        &:before{
+          height: calc(450% - 40px);
+          opacity: 1;
+        }
+      }   
+    } 
+    &-bgtransition{
+      &:before{
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+    }
+    @at-root{
+      %defaultScaleYZero{
+        &:before{
+          transform: scaleY(0);
+        }
+        &:hover{
+          &:before{
+            transform: scaleY(1);
+          }
+        }
+      }
+    }
+    &-shutter{
+      @extend .vbtn-effect-bgtransition;
+      &-vertical{
+        &-out{
+          @extend .vbtn-effect-shutter;          
+          @extend %defaultScaleYZero;
+        }
+      }
+      &-horizontal{
+        &-out{
+          @extend .vbtn-effect-shutter;
+          &:before{
+            transform: scaleX(0);
+          }
+          &:hover{
+            &:before{
+              transform: scaleX(1);
+            }
+          }
+        }
+      }
+    }
+    &-bounce{
+      @extend .vbtn-effect-bgtransition;
+      @extend %defaultScaleYZero;
+      &:hover{
+        &:before{
+          -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+           transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+        }
+      }
+      &-top{
+        @extend .vbtn-effect-bounce;
+        &:before{
+          -webkit-transform-origin: 50% 100%;
+          transform-origin: 50% 100%;
+        }
+      }
+      &-bottom{
+        @extend .vbtn-effect-bounce;
+        &:before{
+          -webkit-transform-origin: 50% 0;
+          transform-origin: 50% 0;
+        }
+      }
+    }
+  }
+  &-main{
+    background-color: setColor(main);
+    &:before{
+      background-color: lighten(setColor(main), 15%);
+    }
+  }
+  &-single{
+    margin-bottom: 15px;
+    @include resp-min(sm){
+      margin-top: 70px;
+    }
+    @include resp-max(sm){
+      margin-top: 35px;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.transition{
+  @include transitionMake();
+}
+.pseudo{
+  @include pseudo();
+}
+.vertical-image{
+  &:before{
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;   
+  }
+  img{
+    max-height: 100%;
+    vertical-align: middle;   
+  }
+}
+@for $i from 1 through 3{
+  .index-#{$i}{
+    z-index: $i;
+  }
+}
+.text{
+  &-small{
+    font-size: 11px;
+  }
+}
+@for $i from 1 through 2{
+  .ls-#{$i}{
+    letter-spacing: #{$i}px;
+  }
+}

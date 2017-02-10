@@ -1,0 +1,29 @@
+.vcollapse{
+	&-wrap{
+		margin-top: 30px;
+		margin-bottom: 30px;
+		& > & {
+			padding-left: 15px;
+  		padding-right: 15px;
+		}
+	}
+	
+	&-header{
+		cursor: pointer;
+		padding: 15px;
+		background-color: #ddd;
+		
+	}
+	&-inner{
+		margin-bottom: 30px;
+		&.active{
+			.vcollapse-header{
+				background-color: #f00;
+			}
+		}
+	}
+	&-body{
+		margin-top: 7.5px;
+		display: none;
+	}
+}

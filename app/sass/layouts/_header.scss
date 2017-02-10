@@ -1,0 +1,8 @@
+.header {
+	@extend .relative;
+	min-height: 50px;
+	z-index: z('default');
+	color: #fff;
+	padding: 50px 0;
+	background-color: #ddd;
+}

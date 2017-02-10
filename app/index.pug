@@ -1,0 +1,36 @@
+extends includes/layout
+block title
+	title Main Page
+block content
+
+block dev
+	.vcontainer
+		.vbtn-single.text-center
+			+button("vbtn vbtn-effect-shutter-vertical-out vbtn-main", "#modalform") Button_text_big1
+		+button("vbtn vbtn-effect-shutter-vertical-out vbtn-main", "#modalvideo")(data-video="https://www.youtube.com/embed/Iutk7AboLZI" data-source="youtube" data-title="Уроки JavaScript Практика #3 Пишем свой CSS генератор") Button_text_big
+	.vmodal#modalform
+		.vmodal-dialog.vmodal-dialog-default.vmodal-dialog-center
+			button(type="button" class="vmodal-close" data-close="vmodal") &times;
+			.vmodal-box
+				p.vmodal-title Отправить заявку
+				.vmodal-body
+					form(action="" class="vmain-form")
+						.vmain-form-row.vmain-form-input-wrap
+							input(type="text" placeholder="Имя")
+							span.vmain-form-line
+						.vmain-form-row.vmain-form-input-wrap
+							input(type="email" placeholder="E-mail")
+							span.vmain-form-line
+						.vmain-form-row.vmain-form-input-wrap
+							input(type="text" placeholder="Телефон")
+							span.vmain-form-line
+						.vmain-form-row.vmain-form-btn-wrap
+							button.vbtn.vbtn-effect-bounce-top(type="submit") Получить!
+	.vmodal.vmodal-transparent#modalvideo
+		.vmodal-dialog.big
+			button(type="button" class="vmodal-close" data-close="vmodal") &times;
+			.vmodal-box
+				p.vmodal-title
+				.vmodal-body
+					.vmodal-video
+					// +button("vbtn vbtn-effect-shutter-vertical-out vbtn-main", "#modalform") Button_text_big1

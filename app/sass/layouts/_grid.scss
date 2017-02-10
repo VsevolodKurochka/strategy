@@ -1,0 +1,175 @@
+/* ===================== 
+Start: COLUMNS      
+======================== */
+@include make-column(xs,"not-push","not-pull","not-offset");
+@include resp-min(sm){
+  @include make-column(sm,"not-push","not-pull","not-offset");
+}
+@include resp-min(md){
+  @include make-column(md,"not-push","not-pull","not-offset");
+}
+@include resp-min(lg){
+  @include make-column(lg,"not-push","not-pull","not-offset");
+}
+/* =====================
+End:  COLUMNS
+======================== */
+
+/* ===================== 
+Start: HIDDEN AND VISIBLE UTILITIES      
+======================== */
+.vhidden,
+%vvisible{
+  display: none !important;
+}
+@each $br-name, $br-value in $breakpoints{
+  .vvisible-#{$br-name}{
+    @extend %vvisible;
+  }
+}
+@include resp-min(lg){
+  @include visibility-hidden(lg);
+  @include visibility-visible(lg);
+}
+@include resp-min(md){
+  @include resp-max(lg){
+    @include visibility-hidden(md);
+    @include visibility-visible(md);    
+  }
+}
+@include resp-min(sm){
+  @include resp-max(md){
+    @include visibility-hidden(sm);
+    @include visibility-visible(sm);   
+  }
+}
+@include resp-max(sm){
+  @include visibility-hidden(xs);
+  @include visibility-visible(xs); 
+}
+@include resp-min(exs){
+  @include resp-max(xs){
+    @include visibility-visible(exs);
+  }
+}
+/* =====================
+End:  HIDDEN AND VISIBLE UTILITIES
+======================== */
+.relative{
+  position: relative;
+}
+%global-block{
+  min-height: 1px;
+  padding-left: getComp(gutter);
+  padding-right: getComp(gutter); 
+  @extend .relative;
+}
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.cf{
+  @extend .relative;
+  @include cf();
+}
+.vrow{
+  margin-left: - getComp(gutter);
+  margin-right: - getComp(gutter);
+}
+@if getComp(flex) == true{
+  .flex{
+    display: flex;
+    flex: 0 1 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    &-v-center{
+      align-items: center;
+    }
+  }
+  .vrow{
+    @extend .flex;
+  }
+  [class*="#{getComp(columnName)}"]{
+    flex-grow: 0;
+    flex-shrink: 0;
+    padding-left: getComp(gutter);
+    padding-right: getComp(gutter);
+  }
+}@else{
+  .vrow{
+    @extend .cf;
+  }
+  [class*="#{getComp(columnName)}"]{
+    @extend %global-block;
+    float: left;
+  }
+}
+
+.vcontainer, .vcontainer-small{
+  @extend %global-block;
+  @extend .center-block;
+  @extend .cf;
+}
+.vcontainer{
+  @include resp-min(sm){
+    width: getComp(container_sm);
+  }
+  @include resp-min(md){
+    width: getComp(container_md);
+  }
+  @include resp-min(lg){
+    width: getComp(container_lg);
+  }
+  @include resp-min(md){
+    &-small{
+      width: getComp(container_small);
+    }
+  }
+}
+%padding-block{
+  padding-top: 50px;
+  padding-bottom: 50px; 
+}
+.vsection{
+  @extend %padding-block;
+  @extend .relative;
+}
+.vpull{
+  &-left{
+    float: left;
+  }
+  &-right{
+    float: right;
+  }
+}
+@each $br-name, $br-value in $breakpoints{
+  @include resp-min($br-name){
+    // .vpull-#{$br-name}-right{
+    //   float: right;
+    // }
+    // .text-#{$br-name}-right{
+    //   text-align: right;
+    // }
+    // .vpull-#{$br-name}-left{
+    //   float: left;
+    // }
+  }
+  @include resp-max($br-name){
+    // .max-#{$br-name}-negative{
+    //   margin-left: -15px;
+    //   margin-right: -15px;
+    // }
+    // .max-#{$br-name}-nom{
+    //   margin-bottom: 0 !important;
+    // }
+    // .max-#{$br-name}-block{
+    //   display: block;
+    // }
+  }
+}
+.block{
+  &-inline{
+    display: inline-block;
+  }
+}
