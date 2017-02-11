@@ -2,12 +2,82 @@ extends includes/layout
 block title
 	title Main Page
 block content
-
+	header.header
+		.vcontainer
+			.vrow
+				.header-logo: img(src="img/logo.png")
+				.vak-xs-12.vak-md-7.header-text
+					h2.vtitle-small 5-я, юбилейная конференция <span class="text-du">Visotsky Consulting</span>
+					h1.vtitle-big Стратегическое управление
+					h2.vtitle-small-big 6 шагов стремительного <br class="vvisible-xs">движения вверх
+					.header-information
+						p.header-date 29.04 – 5.05
+						p.header-place.vtitle-small Рас-эль-Хайма (ОАЭ)
+					+button("vbtn vbtn-main", "#modalform") <span class="text-du">Забронировать</span> место на конференции
+				.header-man: img(src="img/man.png")
+				.header-rocket: img(src="img/rocket.png")
+	section.vsection.timer-section
+		.timer.timer-absolute
+			p.timer-title Внимание! Осталось:
+			.timer-inner
+				.timer-block
+					span.timer-time.afss_day_bv 05
+					span.timer-sign Дней
+				.timer-block
+					span.timer-time.afss_hours_bv 12
+					span.timer-sign Часов
+				.timer-block
+					span.timer-time.afss_mins_bv 30
+					span.timer-sign Минут
+				.timer-block
+					span.timer-time.afss_secs_bv 00
+					span.timer-sign Секунд
+		.vcontainer
+			h3.vtitle <span class="color-main">100+ выпускников</span> Школы Владельцев Бизнеса соберутся вместе, чтобы:
+			.vrow.text-center
+				+iconDefault('img/friend.png') Встретить <br>старых друзей
+				+iconDefault('img/znaniya.png') Получить продвинутые<br> знания
+				+iconDefault('img/family.png') Провести время<br> с семьей
+				+iconDefault('img/meet.png') Завести новые<br> знакомства
+				+iconDefault('img/business.png') Взглянуть на бизнес<br> со стороны
+				+iconDefault('img/rest.png') Отдохнуть с<br> единомышленниками
+	section.vsection
+		.vcontainer
+			.recepy-wrap.recepy-holidays.gradient-fluid
+				h3.vtitle.recepy-title Мы изобрели рецепт идеальных майских праздников, которые Вы запомните надолго
+				p.vtitle-small-big.recepy-title-small Способ приготовления:
+				.vrow
+					.vak-xs-12.vak-md-8.vak-lg-7
+						ul.list.list-check.list-check-yellow
+							li Берем главный ингредиент - Александра Высоцкого и лучших консультантов и сотрудников Visotsky Consulting
+							li Добавляем 100+ участников, которые проходили ШВБ, но, к сожалению, редко видятся из-за дефицита времени и больших расстояний
+							li Вывозим их подальше (ОАЭ) и размещаем в один из лучших отелей мира (Hilton 5*)
+							li Добавляем обучение на закрытых семинарах, круглые столы, личное общение с Александром Высоцким и консультантами Visotsky Consulting
+							li Разбавляем все это неформальным общением, волейболом, водным поло, квестом, пробежками, экскурсиями по вкусу
+							li Обязательно берем с собой жен и детей. Для них организована отдельная развлекательная и обучающая программа и ВУАЛЯ!...
+			.recepy-wrap.recepy-recom
+				h3.vtitle Рецепт рекомендуется к приему <br> только если Вы:
+				.vrow.flex-j-between
+					.vak-xs-12.vak-sm-6.vak-md-5.icon-wrap.icon-hover.icon-text-big
+						.icon-inner
+							.icon-header
+								.icon-image: .icon-image-inner: img(src="img/vup.png")
+								p.icon-title Выпускник <br> ШВБ
+							.icon-body
+								p За время обучения Вы обзавелись отличными друзьями и партнерами, но видеться практически не получается… пора бы это исправить!
+					.vak-xs-12.vak-sm-6.vak-md-5.icon-wrap.icon-hover.icon-text-big
+						.icon-inner
+							.icon-header
+								.icon-image: .icon-image-inner: img(src="img/girl.png")
+								p.icon-title Вторая половинка <br> владельца бизнеса
+							.icon-body
+								p Вы планируете семейный отдых на Майские, но не знаете как совместить отдых и качественное обучение в компании предпринимателей
+				.vbtn-single.text-center
+					+button("vbtn vbtn-main", "#modalform") Забронировать место на конференции
 block dev
 	.vcontainer
-		.vbtn-single.text-center
-			+button("vbtn vbtn-effect-shutter-vertical-out vbtn-main", "#modalform") Button_text_big1
-		+button("vbtn vbtn-effect-shutter-vertical-out vbtn-main", "#modalvideo")(data-video="https://www.youtube.com/embed/Iutk7AboLZI" data-source="youtube" data-title="Уроки JavaScript Практика #3 Пишем свой CSS генератор") Button_text_big
+
+	// +button("vbtn vbtn-effect-shutter-vertical-out vbtn-main", "#modalvideo")(data-video="https://www.youtube.com/embed/Iutk7AboLZI" data-source="youtube" data-title="Уроки JavaScript Практика #3 Пишем свой CSS генератор") Button_text_big
 	.vmodal#modalform
 		.vmodal-dialog.vmodal-dialog-default.vmodal-dialog-center
 			button(type="button" class="vmodal-close" data-close="vmodal") &times;

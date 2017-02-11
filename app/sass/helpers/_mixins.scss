@@ -84,11 +84,11 @@
 
 
 // Миксин для загрузки шрифтов
-@mixin connect-font($font,$class_name: $font){
+@mixin connect-font($font,$class_name: $font, $type: otf){
   @font-face{
     font-family: $font;
     src: local("#{$font}"), 
-    url(../fonts/#{$font}.otf);
+    url(../fonts/#{$font}.#{$type});
   }
   @if $class_name != null{
     .#{$class_name}{

@@ -1,3 +1,4 @@
+
 .list{
   li{
     @extend .relative;
@@ -6,39 +7,29 @@
       top: 0;
     }
   }
-  &-cancel{
-    li{
-      &:after{
-        width: 37px;
-        height: 37px;
-        @include bg("../img/cancel.png");
-      }
-    }
-  }
-  @include resp-max(sm){
-    text-align: center;
-    margin-bottom: 30px;
-    &:after{
-      left: 50%;
-    }
-    &-cancel{
+  &-check{
+    &-yellow{
+      @extend %list-check;
       li{
-        padding-top: 40px;
         &:after{
-          margin-left: -18.5px;
+          @include bg("../img/check-yellow.png");
         }
       }
     }
   }
-  @include resp-min(sm){
-    margin-bottom: 15px;
+}
+%list-check{
+  li{
+    padding-left: 30px;
+    margin-bottom: 20px;
+    &:last-child{
+      margin-bottom: 0;
+    }
     &:after{
       left: 0;
-    }
-    &-cancel{
-      li{
-        padding-left: 50px;
-      }
+      top: 5px;
+      width: 18px;
+      height: 16px;
     }
   }
 }

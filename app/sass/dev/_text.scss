@@ -1,32 +1,40 @@
 .vtitle{
-	margin-bottom: 60px;
-	padding-left: 7.5px;
-	padding-right: 7.5px;
-	line-height: 1;
-	font-size: 40px;
+	margin-bottom: 40px;
+	line-height: 1.15;
+	font-size: 30px;
+	color: setColor(mainSecond);
 	@include fs('vtitle');
 	@extend .text-center;
-	@extend .text-tu;
-	@extend .light;
+	//@extend .light;
 	&-small{
 		margin: 12px 0;
-		font-size: 17px;
-		@include fs('vtitle-small');	
+		font-size: 18px;
+		line-height: 1.1;
+		@include fs('vtitle-small');
+		&-big{
+			font-size: 18px;
+			@include fs('vtitle-small-big');
+		}
 	}
 	&-big{
 		line-height: 1.1;
-		font-size: 48px;
-		margin: 24px 0;
+		font-size: 30px;
+		margin: 12px 0;
 		@include fs('vtitle-big');
 		@extend .bold;
 	}
-	@include resp-min(sm){
+	@include resp-max(sm){
 		&-big{
-			margin-bottom: 60px;
+			margin: 20px 0;
 		}
 	}
+	@include resp-min(sm){
+		// &-big{
+		// 	margin-bottom: 60px;
+		// }
+	}
 	@include resp-min(md){
-		margin-bottom: 75px;
+		margin-bottom: 60px;
 	}
 }
 .text{
@@ -49,15 +57,15 @@
 	 text-align: right;
 	}
 }
-// @each $br-name, $br-value in $breakpoints{
-//   @include resp-max($br-name){
-//     .max-#{$br-name}-center{
-//       text-align: center;
-//     }
-//   }
-//   @include resp-min($br-name){
-//     .min-#{$br-name}-right{
-//       text-align: right;
-//     }
-//   }
-// }
+@each $br-name, $br-value in $breakpoints{
+  // @include resp-max($br-name){
+  //   .max-#{$br-name}-center{
+  //     text-align: center;
+  //   }
+  // }
+  @include resp-min($br-name){
+    .min-#{$br-name}-right{
+      text-align: right;
+    }
+  }
+}

@@ -86,6 +86,9 @@ End:  HIDDEN AND VISIBLE UTILITIES
     &-v-center{
       align-items: center;
     }
+    &-j-between{
+      justify-content: space-between;
+    }
   }
   .vrow{
     @extend .flex;

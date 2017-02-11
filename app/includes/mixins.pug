@@ -13,3 +13,14 @@ mixin button(buttonClass, modalTarget)
 		- modalTarget = "#modalform"
 
 	button(class=buttonClass data-func="vmodal" data-target=modalTarget)&attributes(attributes): block
+mixin iconDefault(img)
+	.vak-xs-12.vak-sm-6.vak-md-4.icon-wrap.icon-wrap-margin.icon-hover
+		.icon-inner
+			.icon-image
+				.icon-image-inner: img(src=img)
+			p.icon-title: block
+mixin iconImageLeft(img)
+	.vak-xs-12.vak-sm-6.vak-md-4.icon-wrap.icon-hover
+		.icon-inner
+			.icon-image: .icon-image-inner: img(src="")
+			p.icon-title

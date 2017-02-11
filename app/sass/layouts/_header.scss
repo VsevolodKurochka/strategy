@@ -1,8 +1,102 @@
 .header {
 	@extend .relative;
+	overflow: hidden;
 	min-height: 50px;
 	z-index: z('default');
 	color: #fff;
-	padding: 50px 0;
-	background-color: #ddd;
+	padding-top: 23px;
+	padding-bottom: 120px;
+	@include bg('../img/header.jpg');
+	&-logo{
+		flex-basis: 100%;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	&-date{
+		font-size: 36px;
+		line-height: 1;
+	}
+	&-information{
+		margin-top: 25px;
+		margin-bottom: 34px;
+	}
+	&-man,
+	&-rocket{
+		position: absolute;
+	}
+	&-man{
+		font-size: 0;
+	}
+	&-rocket{
+		z-index: -1;
+	}
+	@include resp-max(sm){
+		padding-bottom: 350px;
+		&-man{
+			right: 0;
+			bottom: -500px;
+			max-width: 250px;
+		}
+		&-rocket{
+			right: 0;
+			bottom: -440px;
+			max-width: 350px;
+		}
+		&-logo{
+			text-align: center;
+			margin-bottom: 15px;
+		}
+	}
+	@include resp-min(sm){
+		&-date,
+		&-place{
+			display: inline-block;
+			vertical-align: middle;
+		}
+		&-date{
+			margin-right: 15px;
+		}
+		@include resp-max(md){
+			&-man{
+				width: 300px;
+				bottom: -190px;
+				right: -100px;
+			}
+			&-rocket{
+				width: 350px;
+				right: -150px;
+				top: 60px;
+			}
+		}
+	}
+	@include resp-min(md){	
+		&-text{
+			margin-top: 60px;
+		}	
+		&-man{
+			right: -46px;
+			bottom: -238px;
+		}
+		&-rocket{
+			right: -155px;
+			top: 90px;
+		}
+		@include resp-max(lg){
+			&-man{
+				width: 350px;
+			}
+			&-rocket{
+				right: -35px;
+				width: 450px;
+			}
+		}
+	}
+	@include resp-min(lg){
+		&-date{
+			font-size: 48px;
+		}
+		&-text{
+			padding-left: 80px;
+		}
+	}
 }

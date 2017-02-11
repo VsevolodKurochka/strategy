@@ -9,6 +9,13 @@ $(document).ready(function(){
 				});
 
 		// Menu
+			$(window).scroll(function(){
+				if($(window).scrollTop() > 100){
+					$('.vnav-wrap-fixed').addClass('active');
+				}else{
+					$('.vnav-wrap-fixed').removeClass('active');
+				}
+			});
 			$("[data-menu]").click(function(){
 				var menu_href = $(this).attr("data-menu");
 				//$(body).toggleClass('vnav-active');
@@ -124,6 +131,76 @@ $(document).ready(function(){
 
 
 		// Develope
-			var widthDevice = $(window).width();
-			$(".development").html(widthDevice);
+			// var widthDevice = $(window).width();
+			// $(".development").html(widthDevice);
+		// var remain_bv   = 477000;
+		
+
+		function setCookie(name, value, options) {
+		  options = options || {};
+
+		  var expires = options.expires;
+
+		  if (typeof expires == "number" && expires) {
+		    var d = new Date();
+		    d.setTime(d.getTime() + expires * 1000);
+		    expires = options.expires = d;
+		  }
+		  if (expires && expires.toUTCString) {
+		    options.expires = expires.toUTCString();
+		  }
+
+		  value = encodeURIComponent(value);
+
+		  var updatedCookie = name + "=" + value;
+
+		  for (var propName in options) {
+		    updatedCookie += "; " + propName;
+		    var propValue = options[propName];
+		    if (propValue !== true) {
+		      updatedCookie += "=" + propValue;
+		    }
+		  }
+
+		  document.cookie = updatedCookie;
+		}
+		function getCookie(name) {
+		  var matches = document.cookie.match(new RegExp(
+		    "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+		  ));
+		  return matches ? decodeURIComponent(matches[1]) : undefined;
+		}
+		setCookie('deadline', 477000);
+		var remain = getCookie('deadline');
+		//console.log(remain);
+		console.log( document.cookie );
+		function parseTime_bv(timestamp){
+		    if (timestamp < 0) timestamp = 0;
+		 
+		    var day = Math.floor( (timestamp/60/60) / 24);
+		    var hour = Math.floor(timestamp/60/60);
+		    var mins = Math.floor((timestamp - hour*60*60)/60);
+		    var secs = Math.floor(timestamp - hour*60*60 - mins*60); 
+		    var left_hour = Math.floor( (timestamp - day*24*60*60) / 60 / 60 );
+		 
+		    $('span.afss_day_bv').text("0" + day);
+		    $('span.afss_hours_bv').text(left_hour);
+		 
+		    if(String(mins).length > 1)
+		        $('span.afss_mins_bv').text(mins);
+		    else
+		        $('span.afss_mins_bv').text("0" + mins);
+		    if(String(secs).length > 1)
+		        $('span.afss_secs_bv').text(secs);
+		    else
+		        $('span.afss_secs_bv').text("0" + secs);
+		     
+		}
+		setInterval(function(){
+      
+      parseTime_bv(remain);
+      remain = remain - 1;
+      // if(remain <= 0){
+      // }
+    }, 1000);
 });	

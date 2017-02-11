@@ -1,6 +1,6 @@
 include ./mixins
 .vrow.flex-v-center
-	.vak-xs-8.vak-md-3
+	.vak-xs-8.vak-md-2
 		.vnav-logo
 			button(type="button" class="vnav-btn" data-menu=".vnav-wrap-fixed .vnav")
 				span.lines
@@ -8,26 +8,17 @@ include ./mixins
 					span
 					span
 				//span.text Menu
-			.block-inline
-				img(src="img/logo.png" alt="")
-	nav.vnav.vak-xs-12.vak-md-6
+			.block-inline.vnav-logo-inner
+				img(src="img/logoBlack.png" alt="")
+	nav.vnav.vak-xs-12.vak-md-7.vak-lg-8.min-md-right
 		ul
-			+item("#sec1", "active") Главная
-			+item("#sec1") Обо_мне1
-			+item("#sec1") Обо_мне2
-			+item("#sec1") Обо_мне3
-			+item("#sec1") Обо_мне4
-			+item("#sec1") Обо_мне5
-			+item("#sec1") Обо_мне6
-			+item("#sec1") Обо_мне7
-			+item("#sec1") Обо_мне8
-			+item("#sec1") Обо_мне9
-
-	.vak-xs-4.vak-md-3
+			+item("#sec1", "active") Программа
+			+item("#sec1") Где проходит
+			+item("#sec1") Стоимость
+	.vak-xs-4.vak-md-3.vak-lg-2
 		.vnav-text-toggle.text-right
 			span
 			span
 			span
 		.vnav-text.text-md-right
-			a.vnav-text-inner +38 (093) 961 33 54
-			a.vnav-text-inner.vnav-text-hidden +38 (093) 961 33 54
+			a(href="tel: 0-800-21-66-51").vnav-text-inner 0-800-21-66-51
