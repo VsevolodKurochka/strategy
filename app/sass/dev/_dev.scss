@@ -172,6 +172,10 @@
 			margin-bottom: 35px;
 		}
 	}
+	&-value{
+		color: #fff;
+		@include bg('../img/value.jpg')
+	}
 	&-title{
 		text-align: left;
 		margin-bottom: 35px;
@@ -244,8 +248,6 @@
 		&-conf{
 			&-text-wrap{
 				padding-left: 205px;
-				position: relative;
-				top: 25px;
 			}
 			&-title{
 				font-size: 48px;
@@ -257,7 +259,11 @@
 	}
 	@include resp-min(lg){
 		&-wrap{
-			padding: 70px 30px;
+			padding: 40px 70px;
+		}
+		&-conf{
+			padding-left: 30px;
+			padding-right: 30px;
 		}
 		&-recom{
 			padding-left: 70px;
@@ -366,4 +372,137 @@
   	// 	padding-right: 40px;
   	// }
   }
+}
+.extra{
+	&-title{
+		color: #201358;
+		margin-bottom: 10px;
+	}
+	&-row{
+		
+		margin-bottom: 15px;
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+	@include resp-max(sm){
+		&-row{
+			margin-bottom: 45px;
+		}
+		&-title{
+			margin-top: 10px;
+			font-size: 24px;
+			text-align: center;
+		}
+	}
+	@include resp-min(sm){
+		&-row{
+			align-items: center;
+		}
+		&-row:nth-child(even) &-image{
+			order: 2;
+		}
+	}
+	@include resp-min(md){
+
+		&-text{
+			font-size: 24px;
+		}
+	}
+}
+.video{
+	position: relative;
+	
+	overflow: hidden;
+	border-radius: 6px;
+	&-image{
+		font-size: 0;
+		
+	}
+	&-button{
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		width: 70px;
+		height: 70px;
+		border-radius: 100%;
+		background-color: setColor(main);
+		border: none;		
+		outline: none;
+		text-indent: -9999px;
+		transform: translate(-50%,-50%);
+		@extend .transition;
+		&:hover{
+			background-color: setColor(main, light);
+		}
+		&:after{
+			@extend .pseudo;
+			left: 50%;
+			top: 50%;
+			margin-left: -6px;
+			margin-top: -9.5px;
+			border: 11px solid transparent;
+			border-left: 15px solid #fff;
+		}
+	}
+	&-wrap{
+		margin-bottom: 30px;
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+	@include resp-max(sm){
+		max-height: 200px;
+	}
+	@include resp-min(sm){
+		height: 300px;
+		&-image{
+			position: absolute;
+		}
+	}
+}
+.why{
+	&-section{
+		padding-bottom: 0;
+	}
+}
+.slider{
+	&Big{
+		.slick{
+			&-arrow{
+				position: absolute;
+				top: 50%;
+				margin-top: -35px;
+				width: 56px;
+				height: 70px;
+				z-index: 1;
+				background-color: setColor(mainSecond);
+				text-indent: -9999px;
+				border: none;
+				@extend .transition;
+				&:hover{
+					background-color: setColor(mainSecond, light);
+				}
+				&:after{
+					@extend .pseudo;
+					left: 50%;
+					top: 50%;
+					width: 21px;
+					height: 36px;
+					margin-left: -10.5px;
+					margin-top: -18px;
+					@include bg('../img/slickArrow.png');
+				}
+			}
+			&-prev{
+				left: 15px;
+			}
+			&-next{
+				right: 15px;
+				&:after{
+					transform: scale(-1,1);
+				}
+			}
+		}
+	}
 }

@@ -24,3 +24,10 @@ mixin iconImageLeft(img)
 		.icon-inner
 			.icon-image: .icon-image-inner: img(src="")
 			p.icon-title
+mixin extra(img, title)
+	.vrow.extra-row
+		.vak-xs-12.vak-sm-6.extra-image
+			img(src=img)
+		.vak-xs-12.vak-sm-6
+			p.vtitle-small-big.extra-title= title
+			p.extra-text: block 

@@ -119,6 +119,9 @@
     }
   }
   &-single{
+    &-description{
+      margin-top: 25px;
+    }
     @include resp-min(sm){
       margin-top: 70px;
     }

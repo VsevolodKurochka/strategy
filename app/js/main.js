@@ -99,6 +99,12 @@ $(document).ready(function(){
 						class: 'vmodal-iframe',
 						src: thisVideo + '?autoplay=1'
 					}).appendTo('#modalvideo .vmodal-video');
+				}else if(thisSource == 'uppod'){
+					this.player = new Uppod({
+						m:"video",
+						uid:"videoplayer",
+						file: thisVideo
+					});
 				}
 			});
 			$("#modalvideo .vmodal-close").click(function(){
@@ -172,8 +178,6 @@ $(document).ready(function(){
 		}
 		setCookie('deadline', 477000);
 		var remain = getCookie('deadline');
-		//console.log(remain);
-		console.log( document.cookie );
 		function parseTime_bv(timestamp){
 		    if (timestamp < 0) timestamp = 0;
 		 
@@ -203,4 +207,13 @@ $(document).ready(function(){
       // if(remain <= 0){
       // }
     }, 1000);
+    $('.sliderBig').slick({
+    	swipeToSlide: true
+    });
+  //   $('.slider').owlCarousel({
+  //   	items: 1,
+	 //    loop: true,
+	 //    nav: true,
+	 //    navText: ['p', 'n']
+		// });
 });	

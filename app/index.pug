@@ -415,7 +415,73 @@ block content
 						.programm-header
 						.programm-body
 							ul
-								li до 12:00					
+								li до 12:00		
+	section.vsection
+		.vcontainer
+			h3.vtitle Дополнительные возможности <br>для обучения и отдыха:
+			.extra
+				+extra('img/table.png', 'Круглые столы') Это специальный формат общения, обучения и генерации новых идей, во время которого участники обмениваются опытом и помогают друг другу решать проблемы и устранять “узкие места” в их бизнесе
+				+extra('img/gala.png', 'Гала-ужин') Официальная часть конференции заканчивается гала-ужином. Все участники в вечерних платьях и костюмах собираются на торжественное завершение конференции, где Александр Высоцкий произносит торжественную речь и награждает участников почетными сертификатами
+				+extra('img/games.png', 'Волейбол, пробежки и водное-поло') Для всех участников будут организованы турниры по волейболу и водному поло, утренние пробежки, совместные занятия в спортзале. За это время вы не только поддержите свое тело в тонусе, а и сможете изрядно подкачаться!
+				+extra('img/dubai.png', 'Экскурсия в Дубай') В течении этой обширной экскурсии вы посетите: отель Burj Al Arab («Парус»), известные на весь мир искусственные пальмовые острова The Palm Jumeirah Dubai Marina, самый большой в мире торговый центр Dubai Mall, самый высокий в мире фонтан Dubai Fountain и Burj Khalifa – самое высокое здание в мире.
+				+extra('img/keys.png', 'Разбор своих кейсов с консультантами') На конференции присутствуют лучшие консультанты Visotsky Consulting. С каждым из консультантов вы можете договориться и в личной беседе разобрать ваш уникальный случай.
+			.vbtn-single.text-center
+				+button("vbtn vbtn-main", "#modalform") Получить полный список способов времяпровождения на конференции*
+				p.vbtn-single-description * Вам на почту придут дополнительные материалы, которые включают полный список <br>экскурсий, подробное описание отеля и номеров, а также другие детали конференции
+	section.vsection
+		.vcontainer
+			h3.vtitle Как это было в прошлом году
+			.sliderBig
+				div: img(src="img/slider1.jpg")
+				div: img(src="img/slider1.jpg")
+				div: img(src="img/slider1.jpg")
+	section.vsection
+		.vcontainer
+			h3.vtitle А вот что говорят те, <br>кто ездит на конференцию каждый год
+			.vrow.video-row
+				.vak-xs-12.vak-md-6.video-wrap
+					.video
+						.video-image: img(src="img/team.jpg")
+						button.video-button(data-func="vmodal" data-target="#modalvideo" data-video="https://www.youtube.com/embed/Iutk7AboLZI" data-source="uppod") Video
+				.vak-xs-12.vak-md-6.video-wrap
+					.video
+						.video-image: img(src="img/team.jpg")
+						button.video-button(data-func="vmodal" data-target="#modalvideo" data-video="https://www.youtube.com/embed/Iutk7AboLZI" data-source="uppod") Video
+				.vak-xs-12.vak-md-6.video-wrap
+					.video
+						.video-image: img(src="img/team.jpg")
+						button.video-button(data-func="vmodal" data-target="#modalvideo" data-video="https://www.youtube.com/embed/Iutk7AboLZI" data-source="uppod") Video
+	section.vsection.why-section
+		h3.vtitle Почему эта конференция даст взрывной толчок <br class="vhidden-xs">Вашему бизнесу и подарит лучший отдых в этом году:
+		.vcontainer
+			.vrow.text-center
+				+iconDefault('img/team.png') Потрясающий командный <br>дух и встреча своих <br class="vhidden-xs">бизнес-одноклассников
+				+iconDefault('img/why2.png') Эксклюзивные семинары от Александра Высоцкого 
+				+iconDefault('img/why3.png') Неформальное общение и консультации лучших сотрудников Visotsky Consulting
+				+iconDefault('img/why4.png') Специальные мероприятия <br class="vhidden-xs">и активности для Вашей<br class="vhidden-xs"> жены и детей
+				+iconDefault('img/why5.png') “Перезарядка” мозгов и накопление энергии для взятия новых бизнес-вершин
+				+iconDefault('img/why6.png') Возможность на время выйти из бизнеса, чтобы посмотреть на него со стороны
+	section.vsection
+		.vcontainer
+			.recepy-wrap.recepy-value.gradient-fluid
+				h3.vtitle.recepy-title <span class="color-main">Ценность конференции</span>. По полочкам
+				p.vtitle-small-big.recepy-title-small Давайте подытожим, какую ценность имеет конференция:
+				.vrow
+					.vak-xs-12
+						ul.list.list-check.list-check-yellow
+							li Проживание в отеле DoubleTree by Hilton Resort & Spa Marjan Island 5* (отдельная стоимость - ХХХ$)
+							li 3-разовое питание для Вас и семьи (ХХХ$)
+							li 3 полных дня эксклюзивных семинаров от Александра Высоцкого (ХХХ$)
+							li Неформальное общение и возможность проконсультироваться с Александром Высоцким и другими тренерами Visotsky Consulting (обычно эта возможность доступна только VIP-клиентам - ХХХХ$)
+							li Круглые столы, которые длятся 2 дня с возможностью решить свою главную бизнес-проблему (ХХХ$)
+							li Грандиозный гала-ужин по завершении официальной части конференции (ХХХ$)
+							li Организация спортивных активностей для участников конференции: турниры по волейболу и водному поло (ХХХ$)
+							li Экскурсии, обзорные туры городов, сафари и другие развлечения (ХХХ$)
+							li Гостевые семинары для Ваших жён от приглашенных экспертов (ХХХ$)
+			.recepy-wrap.recepy-price
+				h3.vtitle Как видите, реальная стоимость конференции составляет 3999$
+				p.recepy-price-title-small Но, поскольку это мероприятие только для “своих” - для тех, <br>кто проходил Школу Владельцев Бизнеса, кто любит <br> и доверяет нам (и это взаимно)... мы НЕ возьмем с Вас такую сумму.
+				+button("vbtn vbtn-main", "#modalform") Узнать больше деталей и забронировать место на конференцию
 block dev
 	.vcontainer
 
@@ -444,5 +510,4 @@ block dev
 			.vmodal-box
 				p.vmodal-title
 				.vmodal-body
-					.vmodal-video
-					// +button("vbtn vbtn-effect-shutter-vertical-out vbtn-main", "#modalform") Button_text_big1
+					.vmodal-video#videoplayer
