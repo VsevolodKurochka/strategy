@@ -131,6 +131,46 @@
 		color: #fff;
 		border-radius: 6px;
 		@include bg('../img/recepy.jpg');
+		&-total{
+			margin-top: 15px;
+			padding-left: 30px;
+			font-size: 21px;
+			@extend .bold;
+		}
+	}
+	&-conf{
+		@include bg('../img/conf.jpg');
+		@at-root {
+			%confColor{
+				color: setColor(main);
+			}
+		}
+		.vtitle{
+			margin-bottom: 10px;
+			@extend %confColor;
+		}
+		.vbtn-single{
+			margin-top: 30px;
+		}
+		&-title{
+			font-size: 30px;
+			@extend %confColor;
+		}
+		&-text{
+			color: setColor(white);
+		}
+		&-image{
+			position: absolute;
+			left: 0;
+			bottom: 0;
+		}
+	}
+	&-spiker{
+		color: #fff;
+		@include bg('../img/spiker.jpg', 50% 0);
+		&-title{
+			margin-bottom: 35px;
+		}
 	}
 	&-title{
 		text-align: left;
@@ -147,10 +187,26 @@
 	&-recom{
 		border: 4px solid setColor(mainSecond);
 	}
+	&-warning{
+		display: inline-block;
+		padding: 15px;
+		border: 4px solid #fac900;
+		border-radius: 6px;
+		margin-top: 30px;
+	}
 	@include resp-max(sm){
 		&-wrap{
 			margin-left: -15px;
 			margin-right: -15px;
+		}
+		&-conf{
+			padding-bottom: 150px;
+			&-image{
+				right: 0;
+				left: auto;
+				width: 75px;
+				transform: scale(-1,1);
+			}
 		}
 	}
 	@include resp-min(sm){
@@ -163,14 +219,151 @@
 		&-recom{
 			margin-bottom: 70px;
 		}
+		&-spiker{
+			&-title{
+				font-size: 24px;
+				line-height: 1.2;
+				
+			}
+		}
+		&-warning{
+			padding: 10px 30px;
+			font-size: 24px;
+		}
+		@include resp-max(md){
+			&-conf-image{
+				width: 140px;
+			}
+			&-conf-text-wrap{
+				padding-left: 130px;
+			}
+		}
+
+	}
+	@include resp-min(md){
+		&-conf{
+			&-text-wrap{
+				padding-left: 205px;
+				position: relative;
+				top: 25px;
+			}
+			&-title{
+				font-size: 48px;
+			}
+			&-text{
+				font-size: 30px;
+			}
+		}
 	}
 	@include resp-min(lg){
 		&-wrap{
-			padding: 70px 30px 90px;
+			padding: 70px 30px;
 		}
 		&-recom{
 			padding-left: 70px;
 			padding-right: 70px;
 		}
+		
 	}
+}
+.for-who{
+	&-inner{
+		margin-bottom: 15px;
+	}
+	@include resp-max(sm){
+		&-wrap{
+			margin-bottom: 45px;
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+	}
+	@include resp-min(sm){
+		@include resp-max(lg){
+			&-inner .icon-title{
+				min-height: 90px;
+			}
+		}
+	}
+	@include resp-min(md){
+		&-inner{
+			margin-bottom: 45px;
+		}
+	}
+}
+.country-buildings {
+	position: absolute;
+	right: 15px;
+	bottom: -103px;
+	font-size: 0;
+	z-index: -1;
+	@include resp-min(sm){
+		&-title{
+			font-size: 36px;
+		}
+	}
+}
+.programm{
+	color: setColor(white);
+  background-image: linear-gradient( 55deg, rgb(18,21,54) 49%, rgb(10,181,196) 100%);
+  &-title{
+  	color: inherit;
+  }
+  &-header{
+  	height: 100px;
+  	&:after{
+  		content: "";
+  		display: inline-block;
+  		height: 100%;
+  		vertical-align: middle;
+  	}
+  }
+
+  &-number,
+  &-date,
+  &-time-title{
+  	display: inline-block;
+  	vertical-align: middle;
+  }
+  &-number{
+  	min-width: 80px;
+  	color: setColor(main);
+  	font-size: 60px;
+  	margin-right: 15px;
+  }
+  &-date{
+  	font-size: 24px;
+  	line-height: 1.1;
+  }
+  &-body{
+  	min-height: calc(100% - 100px);
+  	border: 2px solid #201358;
+  	border-radius: 6px;
+		padding: 30px 15px;
+		li{
+			margin-bottom: 7.5px;
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+  }
+  &-time{
+  	text-align: center;
+  }
+  &-flex{
+  	min-height: calc(100% - 100px);
+  }
+  @include resp-min(sm){
+  	padding: 60px;
+  	&-body{
+  		padding: 25px 30px;
+  	}
+  	&-list &-header{
+  		padding-left: 60px;
+  	}
+  	// &-row{
+  	// 	padding-left: 40px;
+  	// 	padding-right: 40px;
+  	// }
+  }
 }

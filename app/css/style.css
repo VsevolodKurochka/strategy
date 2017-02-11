@@ -104,7 +104,7 @@ a, button {
   src: local("FuturaBold"), url(../fonts/FuturaBold.otf);
 }
 
-.bold, .vtitle-big, .vmodal-title {
+.bold, .vtitle-big, .recepy-holidays-total, .vmodal-title {
   font-family: FuturaBold;
 }
 
@@ -1591,6 +1591,53 @@ input:focus + .vmain-form-line {
   background-size: cover;
 }
 
+.recepy-holidays-total {
+  margin-top: 15px;
+  padding-left: 30px;
+  font-size: 21px;
+}
+
+.recepy-conf {
+  background: url("../img/conf.jpg") 0 0 no-repeat;
+  background-size: cover;
+}
+
+.recepy-conf .vtitle, .recepy-conf-title {
+  color: #fac900;
+}
+
+.recepy-conf .vtitle {
+  margin-bottom: 10px;
+}
+
+.recepy-conf .vbtn-single {
+  margin-top: 30px;
+}
+
+.recepy-conf-title {
+  font-size: 30px;
+}
+
+.recepy-conf-text {
+  color: white;
+}
+
+.recepy-conf-image {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.recepy-spiker {
+  color: #fff;
+  background: url("../img/spiker.jpg") 50% 0 no-repeat;
+  background-size: cover;
+}
+
+.recepy-spiker-title {
+  margin-bottom: 35px;
+}
+
 .recepy-title {
   text-align: left;
   margin-bottom: 35px;
@@ -1610,10 +1657,28 @@ input:focus + .vmain-form-line {
   border: 4px solid #275384;
 }
 
+.recepy-warning {
+  display: inline-block;
+  padding: 15px;
+  border: 4px solid #fac900;
+  border-radius: 6px;
+  margin-top: 30px;
+}
+
 @media (max-width: 767px) {
   .recepy-wrap {
     margin-left: -15px;
     margin-right: -15px;
+  }
+  .recepy-conf {
+    padding-bottom: 150px;
+  }
+  .recepy-conf-image {
+    right: 0;
+    left: auto;
+    width: 75px;
+    -webkit-transform: scale(-1, 1);
+            transform: scale(-1, 1);
   }
 }
 
@@ -1627,15 +1692,158 @@ input:focus + .vmain-form-line {
   .recepy-recom {
     margin-bottom: 70px;
   }
+  .recepy-spiker-title {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+  .recepy-warning {
+    padding: 10px 30px;
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .recepy-conf-image {
+    width: 140px;
+  }
+  .recepy-conf-text-wrap {
+    padding-left: 130px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .recepy-conf-text-wrap {
+    padding-left: 205px;
+    position: relative;
+    top: 25px;
+  }
+  .recepy-conf-title {
+    font-size: 48px;
+  }
+  .recepy-conf-text {
+    font-size: 30px;
+  }
 }
 
 @media (min-width: 1200px) {
   .recepy-wrap {
-    padding: 70px 30px 90px;
+    padding: 70px 30px;
   }
   .recepy-recom {
     padding-left: 70px;
     padding-right: 70px;
+  }
+}
+
+.for-who-inner {
+  margin-bottom: 15px;
+}
+
+@media (max-width: 767px) {
+  .for-who-wrap {
+    margin-bottom: 45px;
+  }
+  .for-who-wrap:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .for-who-inner .icon-title {
+    min-height: 90px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .for-who-inner {
+    margin-bottom: 45px;
+  }
+}
+
+.country-buildings {
+  position: absolute;
+  right: 15px;
+  bottom: -103px;
+  font-size: 0;
+  z-index: -1;
+}
+
+@media (min-width: 768px) {
+  .country-buildings-title {
+    font-size: 36px;
+  }
+}
+
+.programm {
+  color: white;
+  background-image: -webkit-linear-gradient(35deg, #121536 49%, #0ab5c4 100%);
+  background-image: linear-gradient(55deg, #121536 49%, #0ab5c4 100%);
+}
+
+.programm-title {
+  color: inherit;
+}
+
+.programm-header {
+  height: 100px;
+}
+
+.programm-header:after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.programm-number, .programm-date, .programm-time-title {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.programm-number {
+  min-width: 80px;
+  color: #fac900;
+  font-size: 60px;
+  margin-right: 15px;
+}
+
+.programm-date {
+  font-size: 24px;
+  line-height: 1.1;
+}
+
+.programm-body {
+  min-height: calc(100% - 100px);
+  border: 2px solid #201358;
+  border-radius: 6px;
+  padding: 30px 15px;
+}
+
+.programm-body li {
+  margin-bottom: 7.5px;
+}
+
+.programm-body li:last-child {
+  margin-bottom: 0;
+}
+
+.programm-time {
+  text-align: center;
+}
+
+.programm-flex {
+  min-height: calc(100% - 100px);
+}
+
+@media (min-width: 768px) {
+  .programm {
+    padding: 60px;
+  }
+  .programm-body {
+    padding: 25px 30px;
+  }
+  .programm-list .programm-header {
+    padding-left: 60px;
   }
 }
 
