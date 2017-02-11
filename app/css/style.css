@@ -1557,14 +1557,16 @@ input:focus + .vmain-form-line {
 }
 
 @media (min-width: 768px) {
-  .icon-header .icon-image,
-  .icon-header .icon-title {
+  .icon-left .icon-image,
+  .icon-left .icon-title {
     display: inline-block;
     vertical-align: middle;
   }
+  .icon-left .icon-title {
+    margin-left: 15px;
+  }
   .icon-text-big .icon-title {
     font-size: 23px;
-    margin-left: 15px;
   }
   .icon-wrap-margin {
     margin-bottom: 50px;
