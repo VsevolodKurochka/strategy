@@ -25,9 +25,9 @@
           </div>
           <nav class="vnav vak-xs-12 vak-md-7 vak-lg-8 min-md-right">
             <ul>
-                      <li class="active"><a href="#sec1">Программа</a></li>
-                      <li><a href="#sec1">Где проходит</a></li>
-                      <li><a href="#sec1">Стоимость</a></li>
+                      <li class="active"><a href="#programm">Программа</a></li>
+                      <li><a href="#where">Где проходит</a></li>
+                      <li><a href="#price">Стоимость</a></li>
             </ul>
           </nav>
           <div class="vak-xs-4 vak-md-3 vak-lg-2 min-md-right">
@@ -38,7 +38,10 @@
       </div>
     </div>
     <main class="main-wrapper">
-      <header class="header">
+      <header class="header" id="header">
+        <ul class="header-background" id="intro">
+          <li class="layer background" data-depth="0.4"><img src="img/header.jpg"></li>
+        </ul>
         <div class="vcontainer">
           <div class="vrow">
             <div class="header-logo"><img src="img/logo.png"></div>
@@ -53,9 +56,11 @@
                       <button class="vbtn vbtn-main" data-func="vmodal" data-target="#modalform"><span class="text-du">Забронировать</span> место на конференции
                       </button>
             </div>
-            <div class="header-man"><img src="img/man.png"></div>
-            <div class="header-rocket"><img src="img/rocket.png"></div>
           </div>
+          <ul class="header-scene" id="scene">
+            <li class="layer header-man" data-depth="0.6"><img src="img/man.png"></li>
+            <li class="layer header-rocket" data-depth="0.9"><img src="img/rocket.png"></li>
+          </ul>
         </div>
       </header>
       <section class="vsection timer-section">
@@ -131,7 +136,7 @@
       <section class="vsection">
         <div class="vcontainer">
           <div class="recepy-wrap recepy-holidays gradient-fluid">
-            <h3 class="vtitle recepy-title">Мы изобрели рецепт идеальных майских праздников, которые Вы запомните надолго</h3>
+            <h3 class="vtitle recepy-title recepy-holidays-title">Мы изобрели рецепт идеальных майских праздников, которые Вы запомните надолго</h3>
             <p class="vtitle-small-big recepy-title-small">Способ приготовления:</p>
             <div class="vrow">
               <div class="vak-xs-12 vak-md-8 vak-lg-7">
@@ -304,331 +309,434 @@
         </div>
       </section>
       <section class="vsection" id="programm">
-        <div class="vcontainer">
-          <div class="programm">
-            <h3 class="vtitle programm-title">Тезисная программа конференции:</h3>
-            <div class="vrow programm-row">
-              <div class="vak-xs-12 vak-md-6 programm-list">
-                <div class="programm-header">
-                  <p class="programm-number">29</p>
-                  <p class="programm-date">Апреля <br> Суббота</p>
-                </div>
-                <div class="programm-body">
-                  <ul>
-                    <li>Трансфер с Дубай для Киева</li>
-                    <li>Трансфер с Дубай для Москвы</li>
-                    <li>Поселение участников</li>
-                    <li>Ужин</li>
-                    <li>Торжественное открытие</li>
-                    <li>Свободное время</li>
-                  </ul>
-                </div>
+        <div class="vcontainer programm">
+          <h3 class="vtitle programm-title">Тезисная программа конференции:</h3>
+          <div class="vrow programm-row">
+            <div class="vak-xs-12 vak-md-6 programm-list">
+              <div class="programm-header">
+                <p class="programm-number">29</p>
+                <p class="programm-date">Апреля <br> Суббота</p>
               </div>
-              <div class="vak-xs-12 vak-md-3 programm-time">
-                <div class="programm-header">
-                  <p class="programm-time-title">Время начала</p>
-                </div>
-                <div class="programm-body">
-                  <ul>
-                    <li>13:30</li>
-                    <li>15:30</li>
-                    <li>14:30</li>
-                    <li>18:30</li>
-                    <li>19:30</li>
-                    <li>22:00</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="vak-xs-12 vak-md-3 programm-time">
-                <div class="programm-header">
-                  <p class="programm-time-title">Время завершения</p>
-                </div>
-                <div class="programm-body">
-                  <ul>
-                    <li>14:30</li>
-                    <li>16:30</li>
-                    <li>17:00</li>
-                    <li>19:30</li>
-                    <li>22:00</li>
-                  </ul>
-                </div>
+              <div class="programm-body">
+                <ul>
+                  <li>Трансфер с Дубай для Киева
+                    <p>13: 30 - 14:30</p>
+                  </li>
+                  <li>Трансфер с Дубай для Москвы
+                    <p>15: 30 - 16:30</p>
+                  </li>
+                  <li>Поселение участников
+                    <p>14: 30 - 17:00</p>
+                  </li>
+                  <li>Ужин
+                    <p>18:30 - 19:30</p>
+                  </li>
+                  <li>Торжественное открытие
+                    <p>19:30 - 22:00</p>
+                  </li>
+                  <li>Свободное время
+                    <p>22:00</p>
+                  </li>
+                </ul>
               </div>
             </div>
-            <div class="vrow programm-row">
-              <div class="vak-xs-12 vak-md-6 programm-list">
-                <div class="programm-header">
-                  <p class="programm-number">30</p>
-                  <p class="programm-date">Апреля <br> Воскресенье</p>
-                </div>
-                <div class="programm-body">
-                  <ul>
-                    <li>Море, тренажерный зал 7:00 8:00</li>
-                    <li>Завтрак </li>
-                    <li>Семинар </li>
-                    <li>Кофе-брейк </li>
-                    <li>Семинар </li>
-                    <li>Обед</li>
-                    <li>Семинар</li>
-                    <li>Кофе-брейк </li>
-                    <li>Семинар для сопровождающих </li>
-                    <li>Семинар</li>
-                    <li>Свободное время </li>
-                    <li>Ужин</li>
-                    <li>Свободное время. Настольные игры</li>
-                  </ul>
-                </div>
+            <div class="vak-xs-12 vak-md-3 programm-time">
+              <div class="programm-header">
+                <p class="programm-time-title">Время начала</p>
               </div>
-              <div class="vak-xs-12 vak-md-3 programm-time">
-                <div class="programm-header">
-                  <p class="programm-time-title">Время начала</p>
-                </div>
-                <div class="programm-body">
-                  <ul>
-                    <li>7:00</li>
-                    <li>8:00 </li>
-                    <li>10:00 </li>
-                    <li>11:30</li>
-                    <li>12:00 </li>
-                    <li>13:30</li>
-                    <li>14:30</li>
-                    <li>16:00</li>
-                    <li>16:30</li>
-                    <li>16:30</li>
-                    <li>18:00</li>
-                    <li>19:00</li>
-                    <li>20:00</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="vak-xs-12 vak-md-3 programm-time">
-                <div class="programm-header">
-                  <p class="programm-time-title">Время завершения</p>
-                </div>
-                <div class="programm-body">
-                  <ul>
-                    <li>8:00</li>
-                    <li>10:00</li>
-                    <li>11:30</li>
-                    <li>12:00</li>
-                    <li>13:30</li>
-                    <li>14:30</li>
-                    <li>16:00</li>
-                    <li>16:30</li>
-                    <li>18:00</li>
-                    <li>18:00</li>
-                    <li>19:00</li>
-                    <li>20:00</li>
-                    <li>23:00	</li>
-                  </ul>
-                </div>
+              <div class="programm-body">
+                <ul>
+                  <li>13:30</li>
+                  <li>14:30</li>
+                  <li>15:30</li>
+                  <li>18:30</li>
+                  <li>19:30</li>
+                  <li>22:00</li>
+                </ul>
               </div>
             </div>
-            <div class="vrow programm-row">
-              <div class="vak-xs-12 vak-md-6 programm-list">
-                <div class="programm-header">
-                  <p class="programm-number">1</p>
-                  <p class="programm-date">Мая <br> Понедельник</p>
-                </div>
-                <div class="programm-body">
-                  <ul>
-                    <li>Море, тренажерный зал</li>
-                    <li>Завтрак</li>
-                    <li>Квест </li>
-                    <li>Обед</li>
-                    <li>Семинар</li>
-                    <li>Кофе-брейк</li>
-                    <li>Семинар</li>
-                    <li>Кофе-брейк</li>
-                    <li>Семинар</li>
-                    <li>Ужин</li>
-                    <li>Семинар для сопровождающих</li>
-                    <li>Круглые столы</li>
-                  </ul>
-                </div>
+            <div class="vak-xs-12 vak-md-3 programm-time">
+              <div class="programm-header">
+                <p class="programm-time-title">Время завершения</p>
               </div>
-              <div class="vak-xs-12 vak-md-3 programm-time">
-                <div class="programm-header">
-                  <p class="programm-time-title">Время начала</p>
-                </div>
-                <div class="programm-body">
-                  <ul>
-                    <li>7:00 </li>
-                    <li>8:00 </li>
-                    <li>10:00 </li>
-                    <li>12:30 </li>
-                    <li>13:30 </li>
-                    <li>15:00 </li>
-                    <li>15:30 </li>
-                    <li>17:00 </li>
-                    <li>17:30 </li>
-                    <li>19:00 </li>
-                    <li>20:00</li>
-                    <li>20:00</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="vak-xs-12 vak-md-3 programm-time">
-                <div class="programm-header">
-                  <p class="programm-time-title">Время завершения</p>
-                </div>
-                <div class="programm-body">
-                  <ul>
-                    <li>8:00</li>
-                    <li>10:00</li>
-                    <li>12:30</li>
-                    <li>13:30</li>
-                    <li>15:00</li>
-                    <li>15:30</li>
-                    <li>17:00</li>
-                    <li>17:30</li>
-                    <li>19:00</li>
-                    <li>20:00</li>
-                    <li>21:30</li>
-                    <li>21:30</li>
-                  </ul>
-                </div>
+              <div class="programm-body">
+                <ul>
+                  <li>14:30</li>
+                  <li>16:30</li>
+                  <li>17:00</li>
+                  <li>19:30</li>
+                  <li>22:00</li>
+                </ul>
               </div>
             </div>
-            <div class="vrow programm-row">
-              <div class="vak-xs-12 vak-md-6 programm-list">
-                <div class="programm-header">
-                  <p class="programm-number">2</p>
-                  <p class="programm-date">Мая <br> Вторник</p>
-                </div>
-                <div class="programm-body">
-                  <ul>
-                    <li>Море, тренажерный зал </li>
-                    <li>Завтрак</li>
-                    <li>Семинар</li>
-                    <li>Кофе-брейк </li>
-                    <li>Семинар</li>
-                    <li>Обед</li>
-                    <li>Экскурсия</li>
-                    <li>Ужин </li>
-                    <li>Свободное время. Настольные игры</li>
-                  </ul>
-                </div>
+          </div>
+          <div class="vrow programm-row">
+            <div class="vak-xs-12 vak-md-6 programm-list">
+              <div class="programm-header">
+                <p class="programm-number">30</p>
+                <p class="programm-date">Апреля <br> Воскресенье</p>
               </div>
-              <div class="vak-xs-12 vak-md-3 programm-time">
-                <div class="programm-header">
-                  <p class="programm-time-title">Время начала</p>
-                </div>
-                <div class="programm-body">
-                  <ul>
-                    <li>7:00</li>
-                    <li>8:00</li>
-                    <li>9:30</li>
-                    <li>11:00</li>
-                    <li>11:30</li>
-                    <li>13:00</li>
-                    <li>14:00</li>
-                    <li>20:00</li>
-                    <li>21:30</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="vak-xs-12 vak-md-3 programm-time">
-                <div class="programm-header">
-                  <p class="programm-time-title">Время завершения</p>
-                </div>
-                <div class="programm-body">
-                  <ul>
-                    <li>8:00</li>
-                    <li>10:00</li>
-                    <li>11:00</li>
-                    <li>11:30</li>
-                    <li>13:00</li>
-                    <li>14:00</li>
-                    <li>20:00</li>
-                    <li>21:30</li>
-                    <li>23:00</li>
-                  </ul>
-                </div>
+              <div class="programm-body">
+                <ul>
+                  <li>Море, тренажерный зал 
+                    <p>7:00 - 8:00</p>
+                  </li>
+                  <li>Завтрак 
+                    <p>8:00  - 10:00</p>
+                  </li>
+                  <li>Семинар 
+                    <p>10:00 - 11:30</p>
+                  </li>
+                  <li>Кофе-брейк 
+                    <p>11:30 - 12:00</p>
+                  </li>
+                  <li>Семинар 
+                    <p>12:00 - 13:30</p>
+                  </li>
+                  <li>Обед
+                    <p>13:30 - 14:30</p>
+                  </li>
+                  <li>Семинар
+                    <p>14:30 - 16:00</p>
+                  </li>
+                  <li>Кофе-брейк 
+                    <p>16:00 - 16:30</p>
+                  </li>
+                  <li>Семинар для сопровождающих 
+                    <p>16:30 - 18:00</p>
+                  </li>
+                  <li>Семинар
+                    <p>16:30 - 18:00</p>
+                  </li>
+                  <li>Свободное время 
+                    <p>18:00 - 19:00</p>
+                  </li>
+                  <li>Ужин
+                    <p>19:00 - 20:00</p>
+                  </li>
+                  <li>Свободное время. Настольные игры
+                    <p>20:00 - 23:00	</p>
+                  </li>
+                </ul>
               </div>
             </div>
-            <div class="vrow programm-row">
-              <div class="vak-xs-12 vak-md-6 programm-list">
-                <div class="programm-header">
-                  <p class="programm-number">4</p>
-                  <p class="programm-date">Мая <br> Четверг</p>
-                </div>
-                <div class="programm-body">
-                  <ul>
-                    <li>Море, тренажерный зал</li>
-                    <li>Завтрак</li>
-                    <li>Семинар</li>
-                    <li>Общая фотография</li>
-                    <li>Кофе-брейк</li>
-                    <li>Семинар </li>
-                    <li>Закрытие конференции </li>
-                    <li>Обед</li>
-                    <li>Подготовка к гала-концерту</li>
-                    <li>Фотографирование перед гала-концертом</li>
-                    <li>Гала-ужин</li>
-                  </ul>
-                </div>
+            <div class="vak-xs-12 vak-md-3 programm-time">
+              <div class="programm-header">
+                <p class="programm-time-title">Время начала</p>
               </div>
-              <div class="vak-xs-12 vak-md-3 programm-time">
-                <div class="programm-header">
-                  <p class="programm-time-title">Время начала</p>
-                </div>
-                <div class="programm-body">
-                  <ul>
-                    <li>7:00</li>
-                    <li>8:00</li>
-                    <li>10:00</li>
-                    <li>11:30</li>
-                    <li>11:45</li>
-                    <li>12:15</li>
-                    <li>13:45</li>
-                    <li>14:00</li>
-                    <li>15:00</li>
-                    <li>19:00 </li>
-                    <li>19:30 </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="vak-xs-12 vak-md-3 programm-time">
-                <div class="programm-header">
-                  <p class="programm-time-title">Время завершения</p>
-                </div>
-                <div class="programm-body">
-                  <ul>
-                    <li>8:00</li>
-                    <li>10:00</li>
-                    <li>11:30</li>
-                    <li>11:45</li>
-                    <li>12:15</li>
-                    <li>13:45</li>
-                    <li>14:00</li>
-                    <li>15:00</li>
-                    <li>19:00</li>
-                    <li>19:30</li>
-                    <li>23:30</li>
-                  </ul>
-                </div>
+              <div class="programm-body">
+                <ul>
+                  <li>7:00</li>
+                  <li>8:00 </li>
+                  <li>10:00 </li>
+                  <li>11:30</li>
+                  <li>12:00 </li>
+                  <li>13:30</li>
+                  <li>14:30</li>
+                  <li>16:00</li>
+                  <li>16:30</li>
+                  <li>16:30</li>
+                  <li>18:00</li>
+                  <li>19:00</li>
+                  <li>20:00</li>
+                </ul>
               </div>
             </div>
-            <div class="vrow programm-row">
-              <div class="vak-xs-12 vak-md-6 programm-list">
-                <div class="programm-header">
-                  <p class="programm-number">5</p>
-                  <p class="programm-date">Мая <br> Пятница</p>
-                </div>
-                <div class="programm-body">
-                  <ul>
-                    <li>Выселение из номера</li>
-                    <li>Самолет обратно</li>
-                  </ul>
-                </div>
+            <div class="vak-xs-12 vak-md-3 programm-time">
+              <div class="programm-header">
+                <p class="programm-time-title">Время завершения</p>
               </div>
-              <div class="vak-xs-12 vak-md-6 programm-time">
-                <div class="programm-header"></div>
-                <div class="programm-body">
-                  <ul>
-                    <li>до 12:00		</li>
-                  </ul>
-                </div>
+              <div class="programm-body">
+                <ul>
+                  <li>8:00</li>
+                  <li>10:00</li>
+                  <li>11:30</li>
+                  <li>12:00</li>
+                  <li>13:30</li>
+                  <li>14:30</li>
+                  <li>16:00</li>
+                  <li>16:30</li>
+                  <li>18:00</li>
+                  <li>18:00</li>
+                  <li>19:00</li>
+                  <li>20:00</li>
+                  <li>23:00	</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="vrow programm-row">
+            <div class="vak-xs-12 vak-md-6 programm-list">
+              <div class="programm-header">
+                <p class="programm-number">1</p>
+                <p class="programm-date">Мая <br> Понедельник</p>
+              </div>
+              <div class="programm-body">
+                <ul>
+                  <li>Море, тренажерный зал
+                    <p>7:00 - 8:00</p>
+                  </li>
+                  <li>Завтрак
+                    <p>8:00 - 10:00</p>
+                  </li>
+                  <li>Квест 
+                    <p>10:00 - 12:30</p>
+                  </li>
+                  <li>Обед
+                    <p>12:30 - 13:30</p>
+                  </li>
+                  <li>Семинар
+                    <p>13:30 - 15:00</p>
+                  </li>
+                  <li>Кофе-брейк
+                    <p>15:00 - 15:30</p>
+                  </li>
+                  <li>Семинар
+                    <p>15:30 - 17:00</p>
+                  </li>
+                  <li>Кофе-брейк
+                    <p>17:00 - 17:30</p>
+                  </li>
+                  <li>Семинар
+                    <p>17:30 - 19:00</p>
+                  </li>
+                  <li>Ужин
+                    <p>19:00 - 20:00</p>
+                  </li>
+                  <li>Семинар для сопровождающих
+                    <p>20:00 - 21:30</p>
+                  </li>
+                  <li>Круглые столы
+                    <p>20:00 - 21:30</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="vak-xs-12 vak-md-3 programm-time">
+              <div class="programm-header">
+                <p class="programm-time-title">Время начала</p>
+              </div>
+              <div class="programm-body">
+                <ul>
+                  <li>7:00</li>
+                  <li>8:00</li>
+                  <li>10:00</li>
+                  <li>12:30</li>
+                  <li>13:30</li>
+                  <li>15:00</li>
+                  <li>15:30</li>
+                  <li>17:00</li>
+                  <li>17:30</li>
+                  <li>19:00</li>
+                  <li>20:00</li>
+                  <li>20:00</li>
+                </ul>
+              </div>
+            </div>
+            <div class="vak-xs-12 vak-md-3 programm-time">
+              <div class="programm-header">
+                <p class="programm-time-title">Время завершения</p>
+              </div>
+              <div class="programm-body">
+                <ul>
+                  <li>8:00</li>
+                  <li>10:00</li>
+                  <li>12:30</li>
+                  <li>13:30</li>
+                  <li>15:00</li>
+                  <li>15:30</li>
+                  <li>17:00</li>
+                  <li>17:30</li>
+                  <li>19:00</li>
+                  <li>20:00</li>
+                  <li>21:30</li>
+                  <li>21:30</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="vrow programm-row">
+            <div class="vak-xs-12 vak-md-6 programm-list">
+              <div class="programm-header">
+                <p class="programm-number">2</p>
+                <p class="programm-date">Мая <br> Вторник</p>
+              </div>
+              <div class="programm-body">
+                <ul>
+                  <li>Море, тренажерный зал 
+                    <p>7:00 - 8:00</p>
+                  </li>
+                  <li>Завтрак
+                    <p>8:00 - 10:00</p>
+                  </li>
+                  <li>Семинар
+                    <p>9:30 - 11:00</p>
+                  </li>
+                  <li>Кофе-брейк 
+                    <p>11:00 - 11:30</p>
+                  </li>
+                  <li>Семинар
+                    <p>11:30 - 13:00</p>
+                  </li>
+                  <li>Обед
+                    <p>13:00 - 14:00</p>
+                  </li>
+                  <li>Экскурсия
+                    <p>14:00 - 20:00</p>
+                  </li>
+                  <li>Ужин 
+                    <p>20:00 - 21:30</p>
+                  </li>
+                  <li>Свободное время. Настольные игры
+                    <p>21:30 - 23:00</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="vak-xs-12 vak-md-3 programm-time">
+              <div class="programm-header">
+                <p class="programm-time-title">Время начала</p>
+              </div>
+              <div class="programm-body">
+                <ul>
+                  <li>7:00</li>
+                  <li>8:00</li>
+                  <li>9:30</li>
+                  <li>11:00</li>
+                  <li>11:30</li>
+                  <li>13:00</li>
+                  <li>14:00</li>
+                  <li>20:00</li>
+                  <li>21:30</li>
+                </ul>
+              </div>
+            </div>
+            <div class="vak-xs-12 vak-md-3 programm-time">
+              <div class="programm-header">
+                <p class="programm-time-title">Время завершения</p>
+              </div>
+              <div class="programm-body">
+                <ul>
+                  <li>8:00</li>
+                  <li>10:00</li>
+                  <li>11:00</li>
+                  <li>11:30</li>
+                  <li>13:00</li>
+                  <li>14:00</li>
+                  <li>20:00</li>
+                  <li>21:30</li>
+                  <li>23:00</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="vrow programm-row">
+            <div class="vak-xs-12 vak-md-6 programm-list">
+              <div class="programm-header">
+                <p class="programm-number">4</p>
+                <p class="programm-date">Мая <br> Четверг</p>
+              </div>
+              <div class="programm-body">
+                <ul>
+                  <li>Море, тренажерный зал
+                    <p>7:00 - 8:00</p>
+                  </li>
+                  <li>Завтрак
+                    <p>8:00 - 10:00</p>
+                  </li>
+                  <li>Семинар
+                    <p>10:00 - 11:30</p>
+                  </li>
+                  <li>Общая фотография
+                    <p>11:30 - 11:45</p>
+                  </li>
+                  <li>Кофе-брейк
+                    <p>11:45 - 12:15</p>
+                  </li>
+                  <li>Семинар 
+                    <p>12:15 - 13:45</p>
+                  </li>
+                  <li>Закрытие конференции 
+                    <p>13:45 - 14:00</p>
+                  </li>
+                  <li>Обед
+                    <p>14:00 - 15:00</p>
+                  </li>
+                  <li>Подготовка к гала-концерту
+                    <p>15:00 - 19:00</p>
+                  </li>
+                  <li>Фотографирование перед гала-концертом
+                    <p>19:00 - 19:30</p>
+                  </li>
+                  <li>Гала-ужин
+                    <p>19:30 - 23:30</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="vak-xs-12 vak-md-3 programm-time">
+              <div class="programm-header">
+                <p class="programm-time-title">Время начала</p>
+              </div>
+              <div class="programm-body">
+                <ul>
+                  <li>7:00</li>
+                  <li>8:00</li>
+                  <li>10:00</li>
+                  <li>11:30</li>
+                  <li>11:45</li>
+                  <li>12:15</li>
+                  <li>13:45</li>
+                  <li>14:00</li>
+                  <li>15:00</li>
+                  <li>19:00 </li>
+                  <li>19:30 </li>
+                </ul>
+              </div>
+            </div>
+            <div class="vak-xs-12 vak-md-3 programm-time">
+              <div class="programm-header">
+                <p class="programm-time-title">Время завершения</p>
+              </div>
+              <div class="programm-body">
+                <ul>
+                  <li>8:00</li>
+                  <li>10:00</li>
+                  <li>11:30</li>
+                  <li>11:45</li>
+                  <li>12:15</li>
+                  <li>13:45</li>
+                  <li>14:00</li>
+                  <li>15:00</li>
+                  <li>19:00</li>
+                  <li>19:30</li>
+                  <li>23:30</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="vrow programm-row">
+            <div class="vak-xs-12 vak-md-6 programm-list">
+              <div class="programm-header">
+                <p class="programm-number">5</p>
+                <p class="programm-date">Мая <br> Пятница</p>
+              </div>
+              <div class="programm-body">
+                <ul>
+                  <li>Выселение из номера</li>
+                  <li>Самолет обратно</li>
+                  <li>
+                    <p>до 12:00</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="vak-xs-12 vak-md-6 programm-time">
+              <div class="programm-header"></div>
+              <div class="programm-body">
+                <ul>
+                  <li>до 12:00		</li>
+                </ul>
               </div>
             </div>
           </div>
@@ -698,7 +806,7 @@
       </section>
       <section class="vsection">
         <div class="vcontainer">
-          <h3 class="vtitle">А вот что говорят те, <br>кто ездит на конференцию каждый год</h3>
+          <h3 class="vtitle">А вот что говорят те, <br class="vhidden-xs">кто ездит на конференцию каждый год</h3>
           <div class="vrow video-row">
             <div class="vak-xs-12 vak-md-6 video-wrap">
               <div class="video">
@@ -782,15 +890,15 @@
           </div>
         </div>
       </section>
-      <section class="vsection">
+      <section class="vsection" id="price">
         <div class="vcontainer">
           <div class="recepy-wrap recepy-value gradient-fluid">
-            <h3 class="vtitle recepy-title"><span class="color-main">Ценность конференции</span>. По полочкам</h3>
+            <h3 class="vtitle recepy-title"><span class="color-main">Ценность конференции</span>. <br class="vvisible-xs">По полочкам</h3>
             <p class="vtitle-small-big recepy-title-small">Давайте подытожим, какую ценность имеет конференция:</p>
             <div class="vrow">
               <div class="vak-xs-12">
                 <ul class="list list-check list-check-yellow">
-                  <li>Проживание в отеле DoubleTree by Hilton Resort & Spa Marjan Island 5* (отдельная стоимость - ХХХ$)</li>
+                  <li>Проживание в отеле DoubleTree by Hilton Resort &amp; Spa Marjan Island 5* (отдельная стоимость - ХХХ$)</li>
                   <li>3-разовое питание для Вас и семьи (ХХХ$)</li>
                   <li>3 полных дня эксклюзивных семинаров от Александра Высоцкого (ХХХ$)</li>
                   <li>Неформальное общение и возможность проконсультироваться с Александром Высоцким и другими тренерами Visotsky Consulting (обычно эта возможность доступна только VIP-клиентам - ХХХХ$)</li>
@@ -804,9 +912,849 @@
             </div>
           </div>
           <div class="recepy-wrap recepy-price">
-            <h3 class="vtitle">Как видите, реальная стоимость конференции составляет 3999$</h3>
-            <p class="recepy-price-title-small">Но, поскольку это мероприятие только для “своих” - для тех, <br>кто проходил Школу Владельцев Бизнеса, кто любит <br> и доверяет нам (и это взаимно)... мы НЕ возьмем с Вас такую сумму.</p>
-                    <button class="vbtn vbtn-main" data-func="vmodal" data-target="#modalform">Узнать больше деталей и забронировать место на конференцию
+            <div class="recepy-price-really"><img src="img/tag.png"></div>
+            <div class="vrow">
+              <div class="vak-xs-12 vak-sm-9">
+                <h3 class="vtitle recepy-title">Как видите, реальная стоимость конференции составляет <span class="color-main">3999$</span></h3>
+                <p class="recepy-price-title-small recepy-title-small">Но, поскольку это мероприятие только для “своих” - для тех, <br class="vvisible-md vvisible-lg">кто проходил Школу Владельцев Бизнеса, кто любит <br> и доверяет нам (и это взаимно)... мы НЕ возьмем с Вас такую сумму.</p>
+                        <button class="vbtn vbtn-main" data-func="vmodal" data-target="#modalform">Узнать больше деталей и забронировать место на конференцию
+                        </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="vsection who-section text-center">
+        <div class="vcontainer">
+          <h3 class="vtitle who-title-big">Кто уже точно едет с нами*</h3>
+          <p class="vtitle-small">* Информация обновляется в реальном времени</p>
+          <div class="form-search-wrap who-form">
+            <div class="form-search">
+              <input class="form-search-input who-input" type="text" placeholder="Введите имя или фамилию однокурсника">
+              <button class="form-search-button who-btn" type="button"></button>
+            </div>
+          </div>
+          <div class="vrow who-row">
+                    <div class="vak-xs-12 vak-sm-6 vak-md-3 who-wrap">
+                      <div class="who">
+                        <div class="who-header">
+                          <div class="who-image"><img src="http://vc-conf.com/wp-content/uploads/2017/02/unnamed.jpg"></div>
+                        </div>
+                        <div class="who-body">
+                          <p class="who-title">Баринов Алексей</p>
+                          <p class="who-pos">ШВБ-51 Санкт-Петербург</p>
+                        </div>
+                        <div class="who-footer">
+                          <p class="who-footer-title">С ребенком и женой</p>
+                          <div class="who-footer-img">
+                            <div class="who-footer-img-inner"><img src="img/child.png"></div>
+                            <div class="who-footer-img-inner"><img src="img/women.png"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="vak-xs-12 vak-sm-6 vak-md-3 who-wrap">
+                      <div class="who">
+                        <div class="who-header">
+                          <div class="who-image"><img src="http://vc-conf.com/wp-content/uploads/2017/01/Kostenko-Igor.jpg"></div>
+                        </div>
+                        <div class="who-body">
+                          <p class="who-title">Костенко Игорь</p>
+                          <p class="who-pos">ШВБ-76 Москва</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="vak-xs-12 vak-sm-6 vak-md-3 who-wrap">
+                      <div class="who">
+                        <div class="who-header">
+                          <div class="who-image"><img src="http://vc-conf.com/wp-content/uploads/2017/01/Bekirov-Dzhemil.jpg"></div>
+                        </div>
+                        <div class="who-body">
+                          <p class="who-title">Бекиров Джемиль</p>
+                          <p class="who-pos">участник Симферополь</p>
+                        </div>
+                        <div class="who-footer">
+                          <p class="who-footer-title">С ребенком и женой</p>
+                          <div class="who-footer-img">
+                            <div class="who-footer-img-inner"><img src="img/child.png"></div>
+                            <div class="who-footer-img-inner"><img src="img/women.png"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="vak-xs-12 vak-sm-6 vak-md-3 who-wrap">
+                      <div class="who">
+                        <div class="who-header">
+                          <div class="who-image"><img src="http://vc-conf.com/wp-content/uploads/2017/01/Potemkina-Elena.jpg"></div>
+                        </div>
+                        <div class="who-body">
+                          <p class="who-title">Потемкина Елена</p>
+                          <p class="who-pos">участник Киев</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="vak-xs-12 vak-sm-6 vak-md-3 who-wrap">
+                      <div class="who">
+                        <div class="who-header">
+                          <div class="who-image"><img src="http://vc-conf.com/wp-content/uploads/2017/01/Ordovskij_Tanaevskij-Vladimir.jpg"></div>
+                        </div>
+                        <div class="who-body">
+                          <p class="who-title">Ордовский-Танаевский Владимир</p>
+                          <p class="who-pos">ШВБ-86 Москва</p>
+                        </div>
+                        <div class="who-footer">
+                          <p class="who-footer-title">С ребенком и женой</p>
+                          <div class="who-footer-img">
+                            <div class="who-footer-img-inner"><img src="img/child.png"></div>
+                            <div class="who-footer-img-inner"><img src="img/women.png"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="vak-xs-12 vak-sm-6 vak-md-3 who-wrap">
+                      <div class="who">
+                        <div class="who-header">
+                          <div class="who-image"><img src="http://vc-conf.com/wp-content/uploads/2017/01/Suhareva-Evgeniya.jpg"></div>
+                        </div>
+                        <div class="who-body">
+                          <p class="who-title">Сухарева Евгения</p>
+                          <p class="who-pos">WISE СНГ Москва</p>
+                        </div>
+                        <div class="who-footer">
+                          <p class="who-footer-title">С ребенком и женой</p>
+                          <div class="who-footer-img">
+                            <div class="who-footer-img-inner"><img src="img/child.png"></div>
+                            <div class="who-footer-img-inner"><img src="img/women.png"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="vak-xs-12 vak-sm-6 vak-md-3 who-wrap">
+                      <div class="who">
+                        <div class="who-header">
+                          <div class="who-image"><img src="http://vc-conf.com/wp-content/uploads/2017/01/Litvintsova-Ekaterina.jpg"></div>
+                        </div>
+                        <div class="who-body">
+                          <p class="who-title">Литвинцова Екатерина</p>
+                          <p class="who-pos">СДО «Эйнштейн»</p>
+                        </div>
+                        <div class="who-footer">
+                          <p class="who-footer-title">С ребенком и женой</p>
+                          <div class="who-footer-img">
+                            <div class="who-footer-img-inner"><img src="img/child.png"></div>
+                            <div class="who-footer-img-inner"><img src="img/women.png"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="vak-xs-12 vak-sm-6 vak-md-3 who-wrap">
+                      <div class="who">
+                        <div class="who-header">
+                          <div class="who-image"><img src="http://vc-conf.com/wp-content/uploads/2017/01/Rasevich-Dergunova-Natalya.jpg"></div>
+                        </div>
+                        <div class="who-body">
+                          <p class="who-title">Расевич-Дергунова Наталья</p>
+                          <p class="who-pos">Академия Консалтинга</p>
+                        </div>
+                        <div class="who-footer">
+                          <p class="who-footer-title">С ребенком и женой</p>
+                          <div class="who-footer-img">
+                            <div class="who-footer-img-inner"><img src="img/child.png"></div>
+                            <div class="who-footer-img-inner"><img src="img/women.png"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="vak-xs-12 vak-sm-6 vak-md-3 who-wrap">
+                      <div class="who">
+                        <div class="who-header">
+                          <div class="who-image"><img src="http://vc-conf.com/wp-content/uploads/2017/01/Hrenov-Ilya.jpg"></div>
+                        </div>
+                        <div class="who-body">
+                          <p class="who-title">Хренов Илья</p>
+                          <p class="who-pos">ШВБ-83 Санкт-Петербург</p>
+                        </div>
+                        <div class="who-footer">
+                          <p class="who-footer-title">С ребенком и женой</p>
+                          <div class="who-footer-img">
+                            <div class="who-footer-img-inner"><img src="img/child.png"></div>
+                            <div class="who-footer-img-inner"><img src="img/women.png"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="vak-xs-12 vak-sm-6 vak-md-3 who-wrap">
+                      <div class="who">
+                        <div class="who-header">
+                          <div class="who-image"><img src="http://vc-conf.com/wp-content/uploads/2017/01/Grigoreva-Olga.jpg"></div>
+                        </div>
+                        <div class="who-body">
+                          <p class="who-title">Григорьева Ольга</p>
+                          <p class="who-pos">ШВБ-59 Санкт-Петербург</p>
+                        </div>
+                        <div class="who-footer">
+                          <p class="who-footer-title">С ребенком и женой</p>
+                          <div class="who-footer-img">
+                            <div class="who-footer-img-inner"><img src="img/child.png"></div>
+                            <div class="who-footer-img-inner"><img src="img/women.png"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="vak-xs-12 vak-sm-6 vak-md-3 who-wrap">
+                      <div class="who">
+                        <div class="who-header">
+                          <div class="who-image"><img src="http://vc-conf.com/wp-content/uploads/2017/01/Salova-Svetlana.jpg"></div>
+                        </div>
+                        <div class="who-body">
+                          <p class="who-title">Салова Светлана</p>
+                          <p class="who-pos">участник</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="vak-xs-12 vak-sm-6 vak-md-3 who-wrap">
+                      <div class="who">
+                        <div class="who-header">
+                          <div class="who-image"><img src="http://vc-conf.com/wp-content/uploads/2017/01/Petrov-Roman.jpg"></div>
+                        </div>
+                        <div class="who-body">
+                          <p class="who-title">Петров Роман</p>
+                          <p class="who-pos">ШВБ44 Киев</p>
+                        </div>
+                        <div class="who-footer">
+                          <p class="who-footer-title">С ребенком и женой</p>
+                          <div class="who-footer-img">
+                            <div class="who-footer-img-inner"><img src="img/child.png"></div>
+                            <div class="who-footer-img-inner"><img src="img/women.png"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="vak-xs-12 vak-sm-6 vak-md-3 who-wrap">
+                      <div class="who">
+                        <div class="who-header">
+                          <div class="who-image"><img src="http://vc-conf.com/wp-content/uploads/2017/01/CHurilova-Ekaterina.jpg"></div>
+                        </div>
+                        <div class="who-body">
+                          <p class="who-title">Чурилова Екатерина</p>
+                          <p class="who-pos"></p>
+                        </div>
+                        <div class="who-footer">
+                          <p class="who-footer-title">С ребенком и женой</p>
+                          <div class="who-footer-img">
+                            <div class="who-footer-img-inner"><img src="img/child.png"></div>
+                            <div class="who-footer-img-inner"><img src="img/women.png"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="vak-xs-12 vak-sm-6 vak-md-3 who-wrap">
+                      <div class="who">
+                        <div class="who-header">
+                          <div class="who-image"><img src="http://vc-conf.com/wp-content/uploads/2017/01/Gordienko-Denis.jpg"></div>
+                        </div>
+                        <div class="who-body">
+                          <p class="who-title">Гордиенко Денис</p>
+                          <p class="who-pos">​ШВБ-83 Санкт-Петербург</p>
+                        </div>
+                        <div class="who-footer">
+                          <p class="who-footer-title">С ребенком и женой</p>
+                          <div class="who-footer-img">
+                            <div class="who-footer-img-inner"><img src="img/child.png"></div>
+                            <div class="who-footer-img-inner"><img src="img/women.png"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="vak-xs-12 vak-sm-6 vak-md-3 who-wrap">
+                      <div class="who">
+                        <div class="who-header">
+                          <div class="who-image"><img src="http://vc-conf.com/wp-content/uploads/2017/01/Argunova-Alla.jpg"></div>
+                        </div>
+                        <div class="who-body">
+                          <p class="who-title">Аргунова Алла</p>
+                          <p class="who-pos">ШВБ-53 Москва</p>
+                        </div>
+                        <div class="who-footer">
+                          <p class="who-footer-title">С ребенком и женой</p>
+                          <div class="who-footer-img">
+                            <div class="who-footer-img-inner"><img src="img/child.png"></div>
+                            <div class="who-footer-img-inner"><img src="img/women.png"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="vak-xs-12 vak-sm-6 vak-md-3 who-wrap">
+                      <div class="who">
+                        <div class="who-header">
+                          <div class="who-image"><img src="http://vc-conf.com/wp-content/uploads/2017/01/argunov.png"></div>
+                        </div>
+                        <div class="who-body">
+                          <p class="who-title">Аргунов Виктор</p>
+                          <p class="who-pos">ШВБ-53 Москва</p>
+                        </div>
+                        <div class="who-footer">
+                          <p class="who-footer-title">С ребенком и женой</p>
+                          <div class="who-footer-img">
+                            <div class="who-footer-img-inner"><img src="img/child.png"></div>
+                            <div class="who-footer-img-inner"><img src="img/women.png"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="vak-xs-12 vak-sm-6 vak-md-3 who-wrap">
+                      <div class="who">
+                        <div class="who-header">
+                          <div class="who-image"><img src=""></div>
+                        </div>
+                        <div class="who-body">
+                          <p class="who-title"></p>
+                          <p class="who-pos"></p>
+                        </div>
+                        <div class="who-footer">
+                          <p class="who-footer-title">С ребенком и женой</p>
+                          <div class="who-footer-img">
+                            <div class="who-footer-img-inner"><img src="img/child.png"></div>
+                            <div class="who-footer-img-inner"><img src="img/women.png"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="vak-xs-12 vak-sm-6 vak-md-3 who-wrap">
+                      <div class="who">
+                        <div class="who-header">
+                          <div class="who-image"><img src=""></div>
+                        </div>
+                        <div class="who-body">
+                          <p class="who-title"></p>
+                          <p class="who-pos"></p>
+                        </div>
+                        <div class="who-footer">
+                          <p class="who-footer-title">С ребенком и женой</p>
+                          <div class="who-footer-img">
+                            <div class="who-footer-img-inner"><img src="img/child.png"></div>
+                            <div class="who-footer-img-inner"><img src="img/women.png"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="vak-xs-12 vak-sm-6 vak-md-3 who-wrap">
+                      <div class="who">
+                        <div class="who-header">
+                          <div class="who-image"><img src=""></div>
+                        </div>
+                        <div class="who-body">
+                          <p class="who-title"></p>
+                          <p class="who-pos"></p>
+                        </div>
+                        <div class="who-footer">
+                          <p class="who-footer-title">С ребенком и женой</p>
+                          <div class="who-footer-img">
+                            <div class="who-footer-img-inner"><img src="img/child.png"></div>
+                            <div class="who-footer-img-inner"><img src="img/women.png"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="vak-xs-12 vak-sm-6 vak-md-3 who-wrap">
+                      <div class="who">
+                        <div class="who-header">
+                          <div class="who-image"><img src=""></div>
+                        </div>
+                        <div class="who-body">
+                          <p class="who-title"></p>
+                          <p class="who-pos"></p>
+                        </div>
+                        <div class="who-footer">
+                          <p class="who-footer-title">С ребенком и женой</p>
+                          <div class="who-footer-img">
+                            <div class="who-footer-img-inner"><img src="img/child.png"></div>
+                            <div class="who-footer-img-inner"><img src="img/women.png"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="vak-xs-12 vak-sm-6 vak-md-3 who-wrap">
+                      <div class="who">
+                        <div class="who-header">
+                          <div class="who-image"><img src=""></div>
+                        </div>
+                        <div class="who-body">
+                          <p class="who-title"></p>
+                          <p class="who-pos"></p>
+                        </div>
+                        <div class="who-footer">
+                          <p class="who-footer-title">С ребенком и женой</p>
+                          <div class="who-footer-img">
+                            <div class="who-footer-img-inner"><img src="img/child.png"></div>
+                            <div class="who-footer-img-inner"><img src="img/women.png"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="vak-xs-12 vak-sm-6 vak-md-3 who-wrap">
+                      <div class="who">
+                        <div class="who-header">
+                          <div class="who-image"><img src=""></div>
+                        </div>
+                        <div class="who-body">
+                          <p class="who-title"></p>
+                          <p class="who-pos"></p>
+                        </div>
+                        <div class="who-footer">
+                          <p class="who-footer-title">С ребенком и женой</p>
+                          <div class="who-footer-img">
+                            <div class="who-footer-img-inner"><img src="img/child.png"></div>
+                            <div class="who-footer-img-inner"><img src="img/women.png"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="vak-xs-12 vak-sm-6 vak-md-3 who-wrap">
+                      <div class="who">
+                        <div class="who-header">
+                          <div class="who-image"><img src=""></div>
+                        </div>
+                        <div class="who-body">
+                          <p class="who-title"></p>
+                          <p class="who-pos"></p>
+                        </div>
+                        <div class="who-footer">
+                          <p class="who-footer-title">С ребенком и женой</p>
+                          <div class="who-footer-img">
+                            <div class="who-footer-img-inner"><img src="img/child.png"></div>
+                            <div class="who-footer-img-inner"><img src="img/women.png"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="vak-xs-12 vak-sm-6 vak-md-3 who-wrap">
+                      <div class="who">
+                        <div class="who-header">
+                          <div class="who-image"><img src=""></div>
+                        </div>
+                        <div class="who-body">
+                          <p class="who-title"></p>
+                          <p class="who-pos"></p>
+                        </div>
+                        <div class="who-footer">
+                          <p class="who-footer-title">С ребенком и женой</p>
+                          <div class="who-footer-img">
+                            <div class="who-footer-img-inner"><img src="img/child.png"></div>
+                            <div class="who-footer-img-inner"><img src="img/women.png"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="vak-xs-12 vak-sm-6 vak-md-3 who-wrap">
+                      <div class="who">
+                        <div class="who-header">
+                          <div class="who-image"><img src=""></div>
+                        </div>
+                        <div class="who-body">
+                          <p class="who-title"></p>
+                          <p class="who-pos"></p>
+                        </div>
+                        <div class="who-footer">
+                          <p class="who-footer-title">С ребенком и женой</p>
+                          <div class="who-footer-img">
+                            <div class="who-footer-img-inner"><img src="img/child.png"></div>
+                            <div class="who-footer-img-inner"><img src="img/women.png"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="vak-xs-12 vak-sm-6 vak-md-3 who-wrap">
+                      <div class="who">
+                        <div class="who-header">
+                          <div class="who-image"><img src=""></div>
+                        </div>
+                        <div class="who-body">
+                          <p class="who-title"></p>
+                          <p class="who-pos"></p>
+                        </div>
+                        <div class="who-footer">
+                          <p class="who-footer-title">С ребенком и женой</p>
+                          <div class="who-footer-img">
+                            <div class="who-footer-img-inner"><img src="img/child.png"></div>
+                            <div class="who-footer-img-inner"><img src="img/women.png"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="vak-xs-12 vak-sm-6 vak-md-3 who-wrap">
+                      <div class="who">
+                        <div class="who-header">
+                          <div class="who-image"><img src=""></div>
+                        </div>
+                        <div class="who-body">
+                          <p class="who-title"></p>
+                          <p class="who-pos"></p>
+                        </div>
+                        <div class="who-footer">
+                          <p class="who-footer-title">С ребенком и женой</p>
+                          <div class="who-footer-img">
+                            <div class="who-footer-img-inner"><img src="img/child.png"></div>
+                            <div class="who-footer-img-inner"><img src="img/women.png"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="vak-xs-12 vak-sm-6 vak-md-3 who-wrap">
+                      <div class="who">
+                        <div class="who-header">
+                          <div class="who-image"><img src=""></div>
+                        </div>
+                        <div class="who-body">
+                          <p class="who-title"></p>
+                          <p class="who-pos"></p>
+                        </div>
+                        <div class="who-footer">
+                          <p class="who-footer-title">С ребенком и женой</p>
+                          <div class="who-footer-img">
+                            <div class="who-footer-img-inner"><img src="img/child.png"></div>
+                            <div class="who-footer-img-inner"><img src="img/women.png"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="vak-xs-12 vak-sm-6 vak-md-3 who-wrap">
+                      <div class="who">
+                        <div class="who-header">
+                          <div class="who-image"><img src=""></div>
+                        </div>
+                        <div class="who-body">
+                          <p class="who-title"></p>
+                          <p class="who-pos"></p>
+                        </div>
+                        <div class="who-footer">
+                          <p class="who-footer-title">С ребенком и женой</p>
+                          <div class="who-footer-img">
+                            <div class="who-footer-img-inner"><img src="img/child.png"></div>
+                            <div class="who-footer-img-inner"><img src="img/women.png"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="vak-xs-12 vak-sm-6 vak-md-3 who-wrap">
+                      <div class="who">
+                        <div class="who-header">
+                          <div class="who-image"><img src=""></div>
+                        </div>
+                        <div class="who-body">
+                          <p class="who-title"></p>
+                          <p class="who-pos"></p>
+                        </div>
+                        <div class="who-footer">
+                          <p class="who-footer-title">С ребенком и женой</p>
+                          <div class="who-footer-img">
+                            <div class="who-footer-img-inner"><img src="img/child.png"></div>
+                            <div class="who-footer-img-inner"><img src="img/women.png"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="vak-xs-12 vak-sm-6 vak-md-3 who-wrap">
+                      <div class="who">
+                        <div class="who-header">
+                          <div class="who-image"><img src=""></div>
+                        </div>
+                        <div class="who-body">
+                          <p class="who-title"></p>
+                          <p class="who-pos"></p>
+                        </div>
+                        <div class="who-footer">
+                          <p class="who-footer-title">С ребенком и женой</p>
+                          <div class="who-footer-img">
+                            <div class="who-footer-img-inner"><img src="img/child.png"></div>
+                            <div class="who-footer-img-inner"><img src="img/women.png"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="vak-xs-12 vak-sm-6 vak-md-3 who-wrap">
+                      <div class="who">
+                        <div class="who-header">
+                          <div class="who-image"><img src=""></div>
+                        </div>
+                        <div class="who-body">
+                          <p class="who-title"></p>
+                          <p class="who-pos"></p>
+                        </div>
+                        <div class="who-footer">
+                          <p class="who-footer-title">С ребенком и женой</p>
+                          <div class="who-footer-img">
+                            <div class="who-footer-img-inner"><img src="img/child.png"></div>
+                            <div class="who-footer-img-inner"><img src="img/women.png"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="vak-xs-12 vak-sm-6 vak-md-3 who-wrap">
+                      <div class="who">
+                        <div class="who-header">
+                          <div class="who-image"><img src=""></div>
+                        </div>
+                        <div class="who-body">
+                          <p class="who-title"></p>
+                          <p class="who-pos"></p>
+                        </div>
+                        <div class="who-footer">
+                          <p class="who-footer-title">С ребенком и женой</p>
+                          <div class="who-footer-img">
+                            <div class="who-footer-img-inner"><img src="img/child.png"></div>
+                            <div class="who-footer-img-inner"><img src="img/women.png"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="vak-xs-12 vak-sm-6 vak-md-3 who-wrap">
+                      <div class="who">
+                        <div class="who-header">
+                          <div class="who-image"><img src=""></div>
+                        </div>
+                        <div class="who-body">
+                          <p class="who-title"></p>
+                          <p class="who-pos"></p>
+                        </div>
+                        <div class="who-footer">
+                          <p class="who-footer-title">С ребенком и женой</p>
+                          <div class="who-footer-img">
+                            <div class="who-footer-img-inner"><img src="img/child.png"></div>
+                            <div class="who-footer-img-inner"><img src="img/women.png"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="vak-xs-12 vak-sm-6 vak-md-3 who-wrap">
+                      <div class="who">
+                        <div class="who-header">
+                          <div class="who-image"><img src=""></div>
+                        </div>
+                        <div class="who-body">
+                          <p class="who-title"></p>
+                          <p class="who-pos"></p>
+                        </div>
+                        <div class="who-footer">
+                          <p class="who-footer-title">С ребенком и женой</p>
+                          <div class="who-footer-img">
+                            <div class="who-footer-img-inner"><img src="img/child.png"></div>
+                            <div class="who-footer-img-inner"><img src="img/women.png"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="vak-xs-12 vak-sm-6 vak-md-3 who-wrap">
+                      <div class="who">
+                        <div class="who-header">
+                          <div class="who-image"><img src=""></div>
+                        </div>
+                        <div class="who-body">
+                          <p class="who-title"></p>
+                          <p class="who-pos"></p>
+                        </div>
+                        <div class="who-footer">
+                          <p class="who-footer-title">С ребенком и женой</p>
+                          <div class="who-footer-img">
+                            <div class="who-footer-img-inner"><img src="img/child.png"></div>
+                            <div class="who-footer-img-inner"><img src="img/women.png"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="vak-xs-12 vak-sm-6 vak-md-3 who-wrap">
+                      <div class="who">
+                        <div class="who-header">
+                          <div class="who-image"><img src=""></div>
+                        </div>
+                        <div class="who-body">
+                          <p class="who-title"></p>
+                          <p class="who-pos"></p>
+                        </div>
+                        <div class="who-footer">
+                          <p class="who-footer-title">С ребенком и женой</p>
+                          <div class="who-footer-img">
+                            <div class="who-footer-img-inner"><img src="img/child.png"></div>
+                            <div class="who-footer-img-inner"><img src="img/women.png"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="vak-xs-12 vak-sm-6 vak-md-3 who-wrap">
+                      <div class="who">
+                        <div class="who-header">
+                          <div class="who-image"><img src=""></div>
+                        </div>
+                        <div class="who-body">
+                          <p class="who-title"></p>
+                          <p class="who-pos"></p>
+                        </div>
+                        <div class="who-footer">
+                          <p class="who-footer-title">С ребенком и женой</p>
+                          <div class="who-footer-img">
+                            <div class="who-footer-img-inner"><img src="img/child.png"></div>
+                            <div class="who-footer-img-inner"><img src="img/women.png"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="vak-xs-12 vak-sm-6 vak-md-3 who-wrap">
+                      <div class="who">
+                        <div class="who-header">
+                          <div class="who-image"><img src=""></div>
+                        </div>
+                        <div class="who-body">
+                          <p class="who-title"></p>
+                          <p class="who-pos"></p>
+                        </div>
+                        <div class="who-footer">
+                          <p class="who-footer-title">С ребенком и женой</p>
+                          <div class="who-footer-img">
+                            <div class="who-footer-img-inner"><img src="img/child.png"></div>
+                            <div class="who-footer-img-inner"><img src="img/women.png"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="vak-xs-12 vak-sm-6 vak-md-3 who-wrap">
+                      <div class="who">
+                        <div class="who-header">
+                          <div class="who-image"><img src=""></div>
+                        </div>
+                        <div class="who-body">
+                          <p class="who-title"></p>
+                          <p class="who-pos"></p>
+                        </div>
+                        <div class="who-footer">
+                          <p class="who-footer-title">С ребенком и женой</p>
+                          <div class="who-footer-img">
+                            <div class="who-footer-img-inner"><img src="img/child.png"></div>
+                            <div class="who-footer-img-inner"><img src="img/women.png"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="vak-xs-12 vak-sm-6 vak-md-3 who-wrap">
+                      <div class="who">
+                        <div class="who-header">
+                          <div class="who-image"><img src=""></div>
+                        </div>
+                        <div class="who-body">
+                          <p class="who-title"></p>
+                          <p class="who-pos"></p>
+                        </div>
+                        <div class="who-footer">
+                          <p class="who-footer-title">С ребенком и женой</p>
+                          <div class="who-footer-img">
+                            <div class="who-footer-img-inner"><img src="img/child.png"></div>
+                            <div class="who-footer-img-inner"><img src="img/women.png"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="vak-xs-12 vak-sm-6 vak-md-3 who-wrap">
+                      <div class="who">
+                        <div class="who-header">
+                          <div class="who-image"><img src=""></div>
+                        </div>
+                        <div class="who-body">
+                          <p class="who-title"></p>
+                          <p class="who-pos"></p>
+                        </div>
+                        <div class="who-footer">
+                          <p class="who-footer-title">С ребенком и женой</p>
+                          <div class="who-footer-img">
+                            <div class="who-footer-img-inner"><img src="img/child.png"></div>
+                            <div class="who-footer-img-inner"><img src="img/women.png"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="vak-xs-12 vak-sm-6 vak-md-3 who-wrap">
+                      <div class="who">
+                        <div class="who-header">
+                          <div class="who-image"><img src=""></div>
+                        </div>
+                        <div class="who-body">
+                          <p class="who-title"></p>
+                          <p class="who-pos"></p>
+                        </div>
+                        <div class="who-footer">
+                          <p class="who-footer-title">С ребенком и женой</p>
+                          <div class="who-footer-img">
+                            <div class="who-footer-img-inner"><img src="img/child.png"></div>
+                            <div class="who-footer-img-inner"><img src="img/women.png"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="vak-xs-12 vak-sm-6 vak-md-3 who-wrap">
+                      <div class="who">
+                        <div class="who-header">
+                          <div class="who-image"><img src=""></div>
+                        </div>
+                        <div class="who-body">
+                          <p class="who-title"></p>
+                          <p class="who-pos"></p>
+                        </div>
+                        <div class="who-footer">
+                          <p class="who-footer-title">С ребенком и женой</p>
+                          <div class="who-footer-img">
+                            <div class="who-footer-img-inner"><img src="img/child.png"></div>
+                            <div class="who-footer-img-inner"><img src="img/women.png"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+          </div>
+        </div>
+      </section>
+      <section class="vsection place-section" id="where">
+        <div class="vcontainer">
+          <div class="negative">
+            <div class="place-wrap">
+              <h3 class="vtitle place-title">Место проведения</h3>
+              <p class="vtitle-small-big place-title-small"><span class="color-main">Локация:</span> ОАЭ, Рас-эль-Хайма, отель DoubleTree <br>by Hilton Resort &amp; Spa Marjan Island 5*</p>
+              <ul class="list list-check-yellow">
+                <li>Это новый отель (ему всего 2 года)</li>
+                <li>Пляж с белоснежным песком привезенным с Аммана. Протяженность - 450 метров</li>
+                <li>На территории 5 бассейнов, 2 детских бассейна</li>
+                <li>Высочайший уровень сервиса</li>
+                <li>Вкусная и разнообразная кухня</li>
+                <li>Комфортная зона для детей (мини аквапарк и мини клуб)</li>
+              </ul>
+              <div class="vrow place-row-second">
+                <div class="vak-xs-12 vak-md-6">
+                  <div class="place-slider">
+                    <div><img src="img/place1.png"></div>
+                    <div><img src="img/place1.png"></div>
+                  </div>
+                </div>
+                <div class="vak-xs-12 vak-md-6">
+                  <p class="vtitle-small-big place-title-small"><span class="color-main">Номера:</span> Guest Room with Sea View</p>
+                  <ul class="list list-check-yellow">
+                    <li>Высокие потолки</li>
+                    <li>Великолепный вид из окна</li>
+                    <li>Просторный балкон</li>
+                    <li>Номера оснащены Wi-Fi</li>
+                    <li>Просторная ванная комната с отдельно стоящим душем</li>
+                    <li>Спальные места для 2 взрослых и 2 детей</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="vsection text-center result-section gradient-fluid color-white xray-wrap">
+        <div class="xray">
+          <div class="xray-slide"></div>
+        </div>
+        <div class="xray-block">
+          <div class="vcontainer">
+            <p class="result-title">“Способность качественно отдыхать и окружать себя нужными<br class="vvisible-lg"> людьми – это всё, чтобы преуспеть в бизнесе или практически в<br class="vvisible-lg"> любой другой области”</p>
+            <p class="result-text">Ли Якокка, легендарный американский менеджер, <br class="vhidden-xs">экс-президент компании Ford и председатель правления Chrysler</p>
+                    <button class="vbtn vbtn-main result-button" data-func="vmodal" data-target="#modalform">Забронировать место на конференцию
                     </button>
           </div>
         </div>
@@ -814,23 +1762,20 @@
       <div class="vcontainer"></div>
       <!-- +button("vbtn vbtn-effect-shutter-vertical-out vbtn-main", "#modalvideo")(data-video="https://www.youtube.com/embed/Iutk7AboLZI" data-source="youtube" data-title="Уроки JavaScript Практика #3 Пишем свой CSS генератор") Button_text_big-->
       <div class="vmodal" id="modalform">
-        <div class="vmodal-dialog vmodal-dialog-default vmodal-dialog-center">
+        <div class="vmodal-dialog big vmodal-dialog-center">
           <button class="vmodal-close" type="button" data-close="vmodal">&times;</button>
           <div class="vmodal-box">
-            <p class="vmodal-title">Отправить заявку</p>
+            <p class="vmodal-title">Заполните форму, что бы забронировать место на мероприятие</p>
             <div class="vmodal-body">
               <form class="vmain-form" action="">
-                <div class="vmain-form-row vmain-form-input-wrap">
-                  <input type="text" placeholder="Имя"><span class="vmain-form-line"></span>
+                <div class="vmain-form-row vmain-form-input-wrap vmain-form-icon name">
+                  <input type="text" placeholder="Имя" required>
                 </div>
-                <div class="vmain-form-row vmain-form-input-wrap">
-                  <input type="email" placeholder="E-mail"><span class="vmain-form-line"></span>
-                </div>
-                <div class="vmain-form-row vmain-form-input-wrap">
-                  <input type="text" placeholder="Телефон"><span class="vmain-form-line"></span>
+                <div class="vmain-form-row vmain-form-input-wrap vmain-form-icon phone">
+                  <input type="text" placeholder="Телефон" required>
                 </div>
                 <div class="vmain-form-row vmain-form-btn-wrap">
-                  <button class="vbtn vbtn-effect-bounce-top" type="submit">Получить!</button>
+                  <button class="vbtn vbtn-main" type="submit"><span class="text-du">Забронировать</span> место на конференции</button>
                 </div>
               </form>
             </div>
@@ -838,7 +1783,7 @@
         </div>
       </div>
       <div class="vmodal vmodal-transparent" id="modalvideo">
-        <div class="vmodal-dialog big">
+        <div class="vmodal-dialog big vmodal-dialog-center">
           <button class="vmodal-close" type="button" data-close="vmodal">&times;</button>
           <div class="vmodal-box">
             <p class="vmodal-title"></p>

@@ -31,3 +31,17 @@ mixin extra(img, title)
 		.vak-xs-12.vak-sm-6
 			p.vtitle-small-big.extra-title= title
 			p.extra-text: block 
+mixin who(img, name, pos, family)
+	.vak-xs-12.vak-sm-6.vak-md-3.who-wrap
+		.who
+			.who-header
+				.who-image: img(src=img)
+			.who-body
+				p.who-title= name
+				p.who-pos= pos
+			if(family == true)
+				.who-footer
+					p.who-footer-title С ребенком и женой
+					.who-footer-img
+						.who-footer-img-inner: img(src="img/child.png")
+						.who-footer-img-inner: img(src="img/women.png")

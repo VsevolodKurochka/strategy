@@ -127,6 +127,9 @@
     }
     @include resp-max(sm){
       margin-top: 35px;
+      &-description{
+        font-size: 12px;
+      }
     }
   }
 }

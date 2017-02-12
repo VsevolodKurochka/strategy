@@ -2,7 +2,9 @@ extends includes/layout
 block title
 	title Main Page
 block content
-	header.header
+	header.header#header
+		ul#intro.header-background
+			li.layer.background(data-depth="0.4"): img(src="img/header.jpg")
 		.vcontainer
 			.vrow
 				.header-logo: img(src="img/logo.png")
@@ -14,8 +16,9 @@ block content
 						p.header-date 29.04 – 5.05
 						p.header-place.vtitle-small Рас-эль-Хайма (ОАЭ)
 					+button("vbtn vbtn-main", "#modalform") <span class="text-du">Забронировать</span> место на конференции
-				.header-man: img(src="img/man.png")
-				.header-rocket: img(src="img/rocket.png")
+			ul#scene.header-scene
+				li.layer.header-man(data-depth="0.6"): img(src="img/man.png")
+				li.layer.header-rocket(data-depth="0.9"): img(src="img/rocket.png")
 	section.vsection.timer-section
 		.timer.timer-absolute
 			p.timer-title Внимание! Осталось:
@@ -44,7 +47,7 @@ block content
 	section.vsection
 		.vcontainer
 			.recepy-wrap.recepy-holidays.gradient-fluid
-				h3.vtitle.recepy-title Мы изобрели рецепт идеальных майских праздников, которые Вы запомните надолго
+				h3.vtitle.recepy-title.recepy-holidays-title Мы изобрели рецепт идеальных майских праздников, которые Вы запомните надолго
 				p.vtitle-small-big.recepy-title-small Способ приготовления:
 				.vrow
 					.vak-xs-12.vak-md-8.vak-lg-7
@@ -162,260 +165,312 @@ block content
 			.country-buildings
 				img(src="img/country-buildings.png")
 	section.vsection#programm
-		.vcontainer
-			.programm
-				h3.vtitle.programm-title Тезисная программа конференции:
-				.vrow.programm-row
-					.vak-xs-12.vak-md-6.programm-list
-						.programm-header
-							p.programm-number 29
-							p.programm-date Апреля <br> Суббота
-						.programm-body
-							ul
-								li Трансфер с Дубай для Киева
-								li Трансфер с Дубай для Москвы
-								li Поселение участников
-								li Ужин
-								li Торжественное открытие
-								li Свободное время
-					.vak-xs-12.vak-md-3.programm-time
-						.programm-header
-							p.programm-time-title Время начала
-						.programm-body
-							ul
-								li 13:30
-								li 15:30
-								li 14:30
-								li 18:30
-								li 19:30
-								li 22:00
-					.vak-xs-12.vak-md-3.programm-time
-						.programm-header
-							p.programm-time-title Время завершения
-						.programm-body
-							ul
-								li 14:30
-								li 16:30
-								li 17:00
-								li 19:30
-								li 22:00
-				.vrow.programm-row
-					.vak-xs-12.vak-md-6.programm-list
-						.programm-header
-							p.programm-number 30
-							p.programm-date Апреля <br> Воскресенье
-						.programm-body
-							ul
-								li Море, тренажерный зал 7:00 8:00
-								li Завтрак 
-								li Семинар 
-								li Кофе-брейк 
-								li Семинар 
-								li Обед
-								li Семинар
-								li Кофе-брейк 
-								li Семинар для сопровождающих 
-								li Семинар
-								li Свободное время 
-								li Ужин
-								li Свободное время. Настольные игры
-					.vak-xs-12.vak-md-3.programm-time
-						.programm-header
-							p.programm-time-title Время начала
-						.programm-body
-							ul
-								li 7:00
-								li 8:00 
-								li 10:00 
-								li 11:30
-								li 12:00 
-								li 13:30
-								li 14:30
-								li 16:00
-								li 16:30
-								li 16:30
-								li 18:00
-								li 19:00
-								li 20:00
-					.vak-xs-12.vak-md-3.programm-time
-						.programm-header
-							p.programm-time-title Время завершения
-						.programm-body
-							ul
-								li 8:00
-								li 10:00
-								li 11:30
-								li 12:00
-								li 13:30
-								li 14:30
-								li 16:00
-								li 16:30
-								li 18:00
-								li 18:00
-								li 19:00
-								li 20:00
-								li 23:00	
-				.vrow.programm-row
-					.vak-xs-12.vak-md-6.programm-list
-						.programm-header
-							p.programm-number 1
-							p.programm-date Мая <br> Понедельник
-						.programm-body
-							ul
-								li Море, тренажерный зал
-								li Завтрак
-								li Квест 
-								li Обед
-								li Семинар
-								li Кофе-брейк
-								li Семинар
-								li Кофе-брейк
-								li Семинар
-								li Ужин
-								li Семинар для сопровождающих
-								li Круглые столы
-					.vak-xs-12.vak-md-3.programm-time
-						.programm-header
-							p.programm-time-title Время начала
-						.programm-body
-							ul
-								li 7:00 
-								li 8:00 
-								li 10:00 
-								li 12:30 
-								li 13:30 
-								li 15:00 
-								li 15:30 
-								li 17:00 
-								li 17:30 
-								li 19:00 
-								li 20:00
-								li 20:00
-					.vak-xs-12.vak-md-3.programm-time
-						.programm-header
-							p.programm-time-title Время завершения
-						.programm-body
-							ul
-								li 8:00
-								li 10:00
-								li 12:30
-								li 13:30
-								li 15:00
-								li 15:30
-								li 17:00
-								li 17:30
-								li 19:00
-								li 20:00
-								li 21:30
-								li 21:30
-				.vrow.programm-row
-					.vak-xs-12.vak-md-6.programm-list
-						.programm-header
-							p.programm-number 2
-							p.programm-date Мая <br> Вторник
-						.programm-body
-							ul
-								li Море, тренажерный зал 
-								li Завтрак
-								li Семинар
-								li Кофе-брейк 
-								li Семинар
-								li Обед
-								li Экскурсия
-								li Ужин 
-								li Свободное время. Настольные игры
-					.vak-xs-12.vak-md-3.programm-time
-						.programm-header
-							p.programm-time-title Время начала
-						.programm-body
-							ul
-								li 7:00
-								li 8:00
-								li 9:30
-								li 11:00
-								li 11:30
-								li 13:00
-								li 14:00
-								li 20:00
-								li 21:30
-					.vak-xs-12.vak-md-3.programm-time
-						.programm-header
-							p.programm-time-title Время завершения
-						.programm-body
-							ul
-								li 8:00
-								li 10:00
-								li 11:00
-								li 11:30
-								li 13:00
-								li 14:00
-								li 20:00
-								li 21:30
-								li 23:00
-				.vrow.programm-row
-					.vak-xs-12.vak-md-6.programm-list
-						.programm-header
-							p.programm-number 4
-							p.programm-date Мая <br> Четверг
-						.programm-body
-							ul
-								li Море, тренажерный зал
-								li Завтрак
-								li Семинар
-								li Общая фотография
-								li Кофе-брейк
-								li Семинар 
-								li Закрытие конференции 
-								li Обед
-								li Подготовка к гала-концерту
-								li Фотографирование перед гала-концертом
-								li Гала-ужин
-					.vak-xs-12.vak-md-3.programm-time
-						.programm-header
-							p.programm-time-title Время начала
-						.programm-body
-							ul
-								li 7:00
-								li 8:00
-								li 10:00
-								li 11:30
-								li 11:45
-								li 12:15
-								li 13:45
-								li 14:00
-								li 15:00
-								li 19:00 
-								li 19:30 
-					.vak-xs-12.vak-md-3.programm-time
-						.programm-header
-							p.programm-time-title Время завершения
-						.programm-body
-							ul
-								li 8:00
-								li 10:00
-								li 11:30
-								li 11:45
-								li 12:15
-								li 13:45
-								li 14:00
-								li 15:00
-								li 19:00
-								li 19:30
-								li 23:30
-				.vrow.programm-row
-					.vak-xs-12.vak-md-6.programm-list
-						.programm-header
-							p.programm-number 5
-							p.programm-date Мая <br> Пятница
-						.programm-body
-							ul
-								li Выселение из номера
-								li Самолет обратно
-					.vak-xs-12.vak-md-6.programm-time
-						.programm-header
-						.programm-body
-							ul
-								li до 12:00		
+		.vcontainer.programm
+			h3.vtitle.programm-title Тезисная программа конференции:
+			.vrow.programm-row
+				.vak-xs-12.vak-md-6.programm-list
+					.programm-header
+						p.programm-number 29
+						p.programm-date Апреля <br> Суббота
+					.programm-body
+						ul
+							li Трансфер с Дубай для Киева
+								p 13: 30 - 14:30
+							li Трансфер с Дубай для Москвы
+								p 15: 30 - 16:30
+							li Поселение участников
+								p 14: 30 - 17:00
+							li Ужин
+								p 18:30 - 19:30
+							li Торжественное открытие
+								p 19:30 - 22:00
+							li Свободное время
+								p 22:00
+				.vak-xs-12.vak-md-3.programm-time
+					.programm-header
+						p.programm-time-title Время начала
+					.programm-body
+						ul
+							li 13:30
+							li 14:30
+							li 15:30
+							li 18:30
+							li 19:30
+							li 22:00
+				.vak-xs-12.vak-md-3.programm-time
+					.programm-header
+						p.programm-time-title Время завершения
+					.programm-body
+						ul
+							li 14:30
+							li 16:30
+							li 17:00
+							li 19:30
+							li 22:00
+			.vrow.programm-row
+				.vak-xs-12.vak-md-6.programm-list
+					.programm-header
+						p.programm-number 30
+						p.programm-date Апреля <br> Воскресенье
+					.programm-body
+						ul
+							li Море, тренажерный зал 
+								p 7:00 - 8:00
+							li Завтрак 
+								p 8:00  - 10:00
+							li Семинар 
+								p 10:00 - 11:30
+							li Кофе-брейк 
+								p 11:30 - 12:00
+							li Семинар 
+								p 12:00 - 13:30
+							li Обед
+								p 13:30 - 14:30
+							li Семинар
+								p 14:30 - 16:00
+							li Кофе-брейк 
+								p 16:00 - 16:30
+							li Семинар для сопровождающих 
+								p 16:30 - 18:00
+							li Семинар
+								p 16:30 - 18:00
+							li Свободное время 
+								p 18:00 - 19:00
+							li Ужин
+								p 19:00 - 20:00
+							li Свободное время. Настольные игры
+								p 20:00 - 23:00	
+				.vak-xs-12.vak-md-3.programm-time
+					.programm-header
+						p.programm-time-title Время начала
+					.programm-body
+						ul
+							li 7:00
+							li 8:00 
+							li 10:00 
+							li 11:30
+							li 12:00 
+							li 13:30
+							li 14:30
+							li 16:00
+							li 16:30
+							li 16:30
+							li 18:00
+							li 19:00
+							li 20:00
+				.vak-xs-12.vak-md-3.programm-time
+					.programm-header
+						p.programm-time-title Время завершения
+					.programm-body
+						ul
+							li 8:00
+							li 10:00
+							li 11:30
+							li 12:00
+							li 13:30
+							li 14:30
+							li 16:00
+							li 16:30
+							li 18:00
+							li 18:00
+							li 19:00
+							li 20:00
+							li 23:00	
+			.vrow.programm-row
+				.vak-xs-12.vak-md-6.programm-list
+					.programm-header
+						p.programm-number 1
+						p.programm-date Мая <br> Понедельник
+					.programm-body
+						ul
+							li Море, тренажерный зал
+								p 7:00 - 8:00
+							li Завтрак
+								p 8:00 - 10:00
+							li Квест 
+								p 10:00 - 12:30
+							li Обед
+								p 12:30 - 13:30
+							li Семинар
+								p 13:30 - 15:00
+							li Кофе-брейк
+								p 15:00 - 15:30
+							li Семинар
+								p 15:30 - 17:00
+							li Кофе-брейк
+								p 17:00 - 17:30
+							li Семинар
+								p 17:30 - 19:00
+							li Ужин
+								p 19:00 - 20:00
+							li Семинар для сопровождающих
+								p 20:00 - 21:30
+							li Круглые столы
+								p 20:00 - 21:30
+				.vak-xs-12.vak-md-3.programm-time
+					.programm-header
+						p.programm-time-title Время начала
+					.programm-body
+						ul
+							li 7:00
+							li 8:00
+							li 10:00
+							li 12:30
+							li 13:30
+							li 15:00
+							li 15:30
+							li 17:00
+							li 17:30
+							li 19:00
+							li 20:00
+							li 20:00
+				.vak-xs-12.vak-md-3.programm-time
+					.programm-header
+						p.programm-time-title Время завершения
+					.programm-body
+						ul
+							li 8:00
+							li 10:00
+							li 12:30
+							li 13:30
+							li 15:00
+							li 15:30
+							li 17:00
+							li 17:30
+							li 19:00
+							li 20:00
+							li 21:30
+							li 21:30
+			.vrow.programm-row
+				.vak-xs-12.vak-md-6.programm-list
+					.programm-header
+						p.programm-number 2
+						p.programm-date Мая <br> Вторник
+					.programm-body
+						ul
+							li Море, тренажерный зал 
+								p 7:00 - 8:00
+							li Завтрак
+								p 8:00 - 10:00
+							li Семинар
+								p 9:30 - 11:00
+							li Кофе-брейк 
+								p 11:00 - 11:30
+							li Семинар
+								p 11:30 - 13:00
+							li Обед
+								p 13:00 - 14:00
+							li Экскурсия
+								p 14:00 - 20:00
+							li Ужин 
+								p 20:00 - 21:30
+							li Свободное время. Настольные игры
+								p 21:30 - 23:00
+				.vak-xs-12.vak-md-3.programm-time
+					.programm-header
+						p.programm-time-title Время начала
+					.programm-body
+						ul
+							li 7:00
+							li 8:00
+							li 9:30
+							li 11:00
+							li 11:30
+							li 13:00
+							li 14:00
+							li 20:00
+							li 21:30
+				.vak-xs-12.vak-md-3.programm-time
+					.programm-header
+						p.programm-time-title Время завершения
+					.programm-body
+						ul
+							li 8:00
+							li 10:00
+							li 11:00
+							li 11:30
+							li 13:00
+							li 14:00
+							li 20:00
+							li 21:30
+							li 23:00
+			.vrow.programm-row
+				.vak-xs-12.vak-md-6.programm-list
+					.programm-header
+						p.programm-number 4
+						p.programm-date Мая <br> Четверг
+					.programm-body
+						ul
+							li Море, тренажерный зал
+								p 7:00 - 8:00
+							li Завтрак
+								p 8:00 - 10:00
+							li Семинар
+								p 10:00 - 11:30
+							li Общая фотография
+								p 11:30 - 11:45
+							li Кофе-брейк
+								p 11:45 - 12:15
+							li Семинар 
+								p 12:15 - 13:45
+							li Закрытие конференции 
+								p 13:45 - 14:00
+							li Обед
+								p 14:00 - 15:00
+							li Подготовка к гала-концерту
+								p 15:00 - 19:00
+							li Фотографирование перед гала-концертом
+								p 19:00 - 19:30
+							li Гала-ужин
+								p 19:30 - 23:30
+				.vak-xs-12.vak-md-3.programm-time
+					.programm-header
+						p.programm-time-title Время начала
+					.programm-body
+						ul
+							li 7:00
+							li 8:00
+							li 10:00
+							li 11:30
+							li 11:45
+							li 12:15
+							li 13:45
+							li 14:00
+							li 15:00
+							li 19:00 
+							li 19:30 
+				.vak-xs-12.vak-md-3.programm-time
+					.programm-header
+						p.programm-time-title Время завершения
+					.programm-body
+						ul
+							li 8:00
+							li 10:00
+							li 11:30
+							li 11:45
+							li 12:15
+							li 13:45
+							li 14:00
+							li 15:00
+							li 19:00
+							li 19:30
+							li 23:30
+			.vrow.programm-row
+				.vak-xs-12.vak-md-6.programm-list
+					.programm-header
+						p.programm-number 5
+						p.programm-date Мая <br> Пятница
+					.programm-body
+						ul
+							li Выселение из номера
+							li Самолет обратно
+							li
+								p до 12:00
+				.vak-xs-12.vak-md-6.programm-time
+					.programm-header
+					.programm-body
+						ul
+							li до 12:00		
 	section.vsection
 		.vcontainer
 			h3.vtitle Дополнительные возможности <br>для обучения и отдыха:
@@ -437,7 +492,7 @@ block content
 				div: img(src="img/slider1.jpg")
 	section.vsection
 		.vcontainer
-			h3.vtitle А вот что говорят те, <br>кто ездит на конференцию каждый год
+			h3.vtitle А вот что говорят те, <br class="vhidden-xs">кто ездит на конференцию каждый год
 			.vrow.video-row
 				.vak-xs-12.vak-md-6.video-wrap
 					.video
@@ -461,15 +516,15 @@ block content
 				+iconDefault('img/why4.png') Специальные мероприятия <br class="vhidden-xs">и активности для Вашей<br class="vhidden-xs"> жены и детей
 				+iconDefault('img/why5.png') “Перезарядка” мозгов и накопление энергии для взятия новых бизнес-вершин
 				+iconDefault('img/why6.png') Возможность на время выйти из бизнеса, чтобы посмотреть на него со стороны
-	section.vsection
+	section.vsection#price
 		.vcontainer
 			.recepy-wrap.recepy-value.gradient-fluid
-				h3.vtitle.recepy-title <span class="color-main">Ценность конференции</span>. По полочкам
+				h3.vtitle.recepy-title <span class="color-main">Ценность конференции</span>. <br class="vvisible-xs">По полочкам
 				p.vtitle-small-big.recepy-title-small Давайте подытожим, какую ценность имеет конференция:
 				.vrow
 					.vak-xs-12
 						ul.list.list-check.list-check-yellow
-							li Проживание в отеле DoubleTree by Hilton Resort & Spa Marjan Island 5* (отдельная стоимость - ХХХ$)
+							li Проживание в отеле DoubleTree by Hilton Resort &amp; Spa Marjan Island 5* (отдельная стоимость - ХХХ$)
 							li 3-разовое питание для Вас и семьи (ХХХ$)
 							li 3 полных дня эксклюзивных семинаров от Александра Высоцкого (ХХХ$)
 							li Неформальное общение и возможность проконсультироваться с Александром Высоцким и другими тренерами Visotsky Consulting (обычно эта возможность доступна только VIP-клиентам - ХХХХ$)
@@ -479,33 +534,140 @@ block content
 							li Экскурсии, обзорные туры городов, сафари и другие развлечения (ХХХ$)
 							li Гостевые семинары для Ваших жён от приглашенных экспертов (ХХХ$)
 			.recepy-wrap.recepy-price
-				h3.vtitle Как видите, реальная стоимость конференции составляет 3999$
-				p.recepy-price-title-small Но, поскольку это мероприятие только для “своих” - для тех, <br>кто проходил Школу Владельцев Бизнеса, кто любит <br> и доверяет нам (и это взаимно)... мы НЕ возьмем с Вас такую сумму.
-				+button("vbtn vbtn-main", "#modalform") Узнать больше деталей и забронировать место на конференцию
+				.recepy-price-really: img(src="img/tag.png")
+				.vrow
+					.vak-xs-12.vak-sm-9
+						h3.vtitle.recepy-title Как видите, реальная стоимость конференции составляет <span class="color-main">3999$</span>
+						p.recepy-price-title-small.recepy-title-small Но, поскольку это мероприятие только для “своих” - для тех, <br class="vvisible-md vvisible-lg">кто проходил Школу Владельцев Бизнеса, кто любит <br> и доверяет нам (и это взаимно)... мы НЕ возьмем с Вас такую сумму.
+						+button("vbtn vbtn-main", "#modalform") Узнать больше деталей и забронировать место на конференцию
+	section.vsection.who-section.text-center
+		.vcontainer
+			h3.vtitle.who-title-big Кто уже точно едет с нами*
+			p.vtitle-small * Информация обновляется в реальном времени
+			.form-search-wrap.who-form
+				.form-search
+					input(type="text" placeholder="Введите имя или фамилию однокурсника" class="form-search-input who-input")
+					button(type="button" class="form-search-button who-btn")
+			.vrow.who-row
+				+who('http://vc-conf.com/wp-content/uploads/2017/02/unnamed.jpg', 'Баринов Алексей', 'ШВБ-51 Санкт-Петербург', true)
+				+who('http://vc-conf.com/wp-content/uploads/2017/01/Kostenko-Igor.jpg', 'Костенко Игорь', 'ШВБ-76 Москва', false)
+				+who('http://vc-conf.com/wp-content/uploads/2017/01/Bekirov-Dzhemil.jpg', 'Бекиров Джемиль', 'участник Симферополь', true)
+				+who('http://vc-conf.com/wp-content/uploads/2017/01/Potemkina-Elena.jpg', 'Потемкина Елена', 'участник Киев', false)
+				//- 4
+
+				+who('http://vc-conf.com/wp-content/uploads/2017/01/Ordovskij_Tanaevskij-Vladimir.jpg', 'Ордовский-Танаевский Владимир', 'ШВБ-86 Москва', true)
+				+who('http://vc-conf.com/wp-content/uploads/2017/01/Suhareva-Evgeniya.jpg', 'Сухарева Евгения', 'WISE СНГ Москва', true)
+				+who('http://vc-conf.com/wp-content/uploads/2017/01/Litvintsova-Ekaterina.jpg', 'Литвинцова Екатерина', 'СДО «Эйнштейн»', true)
+				+who('http://vc-conf.com/wp-content/uploads/2017/01/Rasevich-Dergunova-Natalya.jpg', 'Расевич-Дергунова Наталья', 'Академия Консалтинга', true)
+				//-4
+
+				+who('http://vc-conf.com/wp-content/uploads/2017/01/Hrenov-Ilya.jpg', 'Хренов Илья', 'ШВБ-83 Санкт-Петербург', true)
+				+who('http://vc-conf.com/wp-content/uploads/2017/01/Grigoreva-Olga.jpg', 'Григорьева Ольга', 'ШВБ-59 Санкт-Петербург', true)
+				+who('http://vc-conf.com/wp-content/uploads/2017/01/Salova-Svetlana.jpg', 'Салова Светлана', 'участник', false)
+				+who('http://vc-conf.com/wp-content/uploads/2017/01/Petrov-Roman.jpg', 'Петров Роман', 'ШВБ44 Киев', true)
+				//-4
+
+				+who('http://vc-conf.com/wp-content/uploads/2017/01/CHurilova-Ekaterina.jpg', 'Чурилова Екатерина', '', true)
+				+who('http://vc-conf.com/wp-content/uploads/2017/01/Gordienko-Denis.jpg', 'Гордиенко Денис', '​ШВБ-83 Санкт-Петербург', true)
+				+who('http://vc-conf.com/wp-content/uploads/2017/01/Argunova-Alla.jpg', 'Аргунова Алла', 'ШВБ-53 Москва', true)
+				+who('http://vc-conf.com/wp-content/uploads/2017/01/argunov.png', 'Аргунов Виктор', 'ШВБ-53 Москва', true)
+				//-4
+
+				+who('', '', '', true)
+				+who('', '', '', true)
+				+who('', '', '', true)
+				+who('', '', '', true)
+				//-4
+
+				+who('', '', '', true)
+				+who('', '', '', true)
+				+who('', '', '', true)
+				+who('', '', '', true)
+				//-4 
+
+				+who('', '', '', true)
+				+who('', '', '', true)
+				+who('', '', '', true)
+				+who('', '', '', true)
+				//-4
+
+				+who('', '', '', true)
+				+who('', '', '', true)
+				+who('', '', '', true)
+				+who('', '', '', true)
+				//-4
+
+				+who('', '', '', true)
+				+who('', '', '', true)
+				+who('', '', '', true)
+				+who('', '', '', true)
+				//-4
+
+				+who('', '', '', true)
+				+who('', '', '', true)
+				+who('', '', '', true)
+				+who('', '', '', true)
+				//-4											
+
+				+who('', '', '', true)
+				+who('', '', '', true)
+				+who('', '', '', true)
+				+who('', '', '', true)
+				//-4
+	section.vsection.place-section#where
+		.vcontainer
+			.negative
+				.place-wrap
+					h3.vtitle.place-title Место проведения
+					p.vtitle-small-big.place-title-small <span class="color-main">Локация:</span> ОАЭ, Рас-эль-Хайма, отель DoubleTree <br>by Hilton Resort &amp; Spa Marjan Island 5*
+					ul.list.list-check-yellow
+						li Это новый отель (ему всего 2 года)
+						li Пляж с белоснежным песком привезенным с Аммана. Протяженность - 450 метров
+						li На территории 5 бассейнов, 2 детских бассейна
+						li Высочайший уровень сервиса
+						li Вкусная и разнообразная кухня
+						li Комфортная зона для детей (мини аквапарк и мини клуб)
+					.vrow.place-row-second
+						.vak-xs-12.vak-md-6
+							.place-slider
+								div: img(src="img/place1.png")
+								div: img(src="img/place1.png")
+						.vak-xs-12.vak-md-6
+							p.vtitle-small-big.place-title-small <span class="color-main">Номера:</span> Guest Room with Sea View
+							ul.list.list-check-yellow
+								li Высокие потолки
+								li Великолепный вид из окна
+								li Просторный балкон
+								li Номера оснащены Wi-Fi
+								li Просторная ванная комната с отдельно стоящим душем
+								li Спальные места для 2 взрослых и 2 детей
+	section.vsection.text-center.result-section.gradient-fluid.color-white.xray-wrap
+		.xray
+			.xray-slide
+		.xray-block
+			.vcontainer
+				p.result-title “Способность качественно отдыхать и окружать себя нужными<br class="vvisible-lg"> людьми – это всё, чтобы преуспеть в бизнесе или практически в<br class="vvisible-lg"> любой другой области”
+				p.result-text Ли Якокка, легендарный американский менеджер, <br class="vhidden-xs">экс-президент компании Ford и председатель правления Chrysler
+				+button("vbtn vbtn-main result-button", "#modalform") Забронировать место на конференцию
 block dev
 	.vcontainer
 
 	// +button("vbtn vbtn-effect-shutter-vertical-out vbtn-main", "#modalvideo")(data-video="https://www.youtube.com/embed/Iutk7AboLZI" data-source="youtube" data-title="Уроки JavaScript Практика #3 Пишем свой CSS генератор") Button_text_big
 	.vmodal#modalform
-		.vmodal-dialog.vmodal-dialog-default.vmodal-dialog-center
+		.vmodal-dialog.big.vmodal-dialog-center
 			button(type="button" class="vmodal-close" data-close="vmodal") &times;
 			.vmodal-box
-				p.vmodal-title Отправить заявку
+				p.vmodal-title Заполните форму, что бы забронировать место на мероприятие
 				.vmodal-body
 					form(action="" class="vmain-form")
-						.vmain-form-row.vmain-form-input-wrap
-							input(type="text" placeholder="Имя")
-							span.vmain-form-line
-						.vmain-form-row.vmain-form-input-wrap
-							input(type="email" placeholder="E-mail")
-							span.vmain-form-line
-						.vmain-form-row.vmain-form-input-wrap
-							input(type="text" placeholder="Телефон")
-							span.vmain-form-line
+						.vmain-form-row.vmain-form-input-wrap.vmain-form-icon.name
+							input(type="text" placeholder="Имя" required)
+						.vmain-form-row.vmain-form-input-wrap.vmain-form-icon.phone
+							input(type="text" placeholder="Телефон" required)
 						.vmain-form-row.vmain-form-btn-wrap
-							button.vbtn.vbtn-effect-bounce-top(type="submit") Получить!
+							button.vbtn.vbtn-main(type="submit") <span class="text-du">Забронировать</span> место на конференции
 	.vmodal.vmodal-transparent#modalvideo
-		.vmodal-dialog.big
+		.vmodal-dialog.big.vmodal-dialog-center
 			button(type="button" class="vmodal-close" data-close="vmodal") &times;
 			.vmodal-box
 				p.vmodal-title

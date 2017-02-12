@@ -73,6 +73,7 @@ End:  HIDDEN AND VISIBLE UTILITIES
   @extend .relative;
   @include cf();
 }
+.negative,
 .vrow{
   margin-left: - getComp(gutter);
   margin-right: - getComp(gutter);
@@ -112,7 +113,7 @@ End:  HIDDEN AND VISIBLE UTILITIES
 .vcontainer, .vcontainer-small{
   @extend %global-block;
   @extend .center-block;
-  @extend .cf;
+  //@extend .cf;
 }
 .vcontainer{
   @include resp-min(sm){
@@ -131,8 +132,12 @@ End:  HIDDEN AND VISIBLE UTILITIES
   }
 }
 %padding-block{
-  padding-top: 50px;
-  padding-bottom: 50px; 
+  padding-top: 25px;
+  padding-bottom: 25px; 
+  @include resp-min(sm){
+    padding-top: 50px;
+    padding-bottom: 50px; 
+  }
 }
 .vsection{
   @extend %padding-block;

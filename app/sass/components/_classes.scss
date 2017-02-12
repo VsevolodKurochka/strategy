@@ -32,8 +32,12 @@
   }
 }
 .color{
+  
   &-main{
     color: setColor(main);
+  }
+  &-white{
+    color: setColor(white);
   }
 }
 .gradient{
